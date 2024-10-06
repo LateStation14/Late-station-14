@@ -28,6 +28,7 @@
     - Moth
     - Reptilian
     - Resomi # fluff/goob/mono
+    - SpElf
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox
