@@ -21,6 +21,9 @@
     interfaces:
       enum.SpelfMoodsUiKey.Key:
         type: SpelfMoodsBoundUserInterface
+        requireInputValidation: false
+      enum.HereticLivingHeartKey.Key:
+        type: LivingHeartMenuBoundUserInterface
   - type: Respirator
     damage:
       types:
