@@ -8,8 +8,8 @@
   values:
     - CompulsiveLiar
     - CompulsiveBeliever
-    - OnlyWhisper
-    - OnlyYell
+#    - OnlyWhisper
+#    - OnlyYell
     - PlantPacifist
     - PuddleDrinker
     - SeekSin
@@ -18,8 +18,8 @@
     - Cannibal
     - Outlaw
     - ExtremeDepartmentDisapproval
-    - Rhyme
-    - Alliterate
+#    - Rhyme
+#    - Alliterate
     - LoneActor
     - Immortal
     - Unknown
@@ -33,8 +33,8 @@
     - FairyRings
     - StayDead
     - Tourist
-    - ThirdPerson
-    - TitleCase
+#    - ThirdPerson
+#    - TitleCase
     - GreySpeak
     - CryWolf
     - CaveDweller
@@ -295,6 +295,9 @@
   id: FolkHero
   moodName: spelf-mood-folk-hero-name
   moodDesc: spelf-mood-folk-hero-desc
+  moodVars:
+    dagdChanceName: DAGDname
+    dagdChanceDesc: DAGD
 
 # Greencomms Blogger: You must keep the station informed about every minute detail of your life.
 - type: spelfMood
