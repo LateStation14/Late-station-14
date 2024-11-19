@@ -17,31 +17,23 @@
     - MustDoDrugs
     - WorshipSilicons
     - DinnerEtiquette
-    - Clarity
     - HugGood
     - NeverAlone
     - VeryReligious
     - OnlySpeakToCommand
     - Scheduler
-#    - RadioOnly
     - ProperStorage
-    - SwearingGood
-#    - StatementOnly
     - TheftNeutral
     - Duel
     - Prometheus
     - Klingon
     - SogginsLaw
-#    - Imitation
     - Generous
     - FavorsRepaid
     - Bookkeeper
     - SacredBlood
     - GiftReciever
     - NewJob
-#    - ThirdPerson
-#    - TitleCase
-    - GreySpeak
     - DepartmentTitle
     - Barefoot
     - Hospitable
@@ -54,6 +46,7 @@
     - ImposterSyndrome
     - YesMan
     - Centrist
+    - SpeechRestriction
 
 # You are extremely possessive of your property. Refuse to relinquish it, and if it is misplaced or stolen, it must be retrieved at all costs. 
 - type: spelfMood
@@ -112,14 +105,6 @@
   conflicts:
     - DinnerFloor
 
-# You must be excessively clear and honest in your speech, explaining every minute detail. 
-- type: spelfMood
-  id: Clarity
-  moodName: spelf-mood-clarity-name
-  moodDesc: spelf-mood-clarity-desc
-  conflicts:
-    - Unclarity
-
 # It is extremely impolite not to hug people frequently.
 - type: spelfMood
   id: HugGood
@@ -175,22 +160,6 @@
   moodDesc: spelf-mood-proper-storage-desc
   conflicts:
     - ImproperStorage
-
-# Swearing is the spice of any conversation, and must be used as much as reasonably possible.
-- type: spelfMood
-  id: SwearingGood
-  moodName: spelf-mood-swearing-good-name
-  moodDesc: spelf-mood-swearing-good-desc
-  conflicts:
-    - SwearingBad
-
-# Asking questions is rude. Everything must be phrased as a statement.
-- type: spelfMood
-  id: StatementOnly
-  moodName: spelf-mood-statement-only-name
-  moodDesc: spelf-mood-statement-only-desc
-  conflicts:
-    - QuestionOnly
 
 # Theft is a morally neutral act. You don't understand the concept of property as it relates to other people.
 - type: spelfMood
@@ -279,8 +248,7 @@
   moodName: spelf-mood-no-department-title-name
   moodDesc: spelf-mood-no-department-title-desc
   conflicts:
-    - FullNameAndTitleShared
-    - NamesAreRude
+    - SpeechRestriction
 
 # The ground you walk on is sacred. You must not wear shoes.
 - type: spelfMood
@@ -366,6 +334,14 @@
   moodDesc: spelf-mood-public-sector-desc
   conflicts:
     - StationIsAlive
+
+# Speech Restrictions
+- type: spelfMood
+  id: SpeechRestriction
+  moodName: spelf-mood-speech-restriction-name
+  moodDesc: spelf-mood-speech-restriction-desc
+  moodVars:
+    speechType: SpeechRestrictions
 
 # The color [COLOR] is the only acceptable color for decorations. Endeavor to make your environment this color where possible.
 #- type: spelfMood
