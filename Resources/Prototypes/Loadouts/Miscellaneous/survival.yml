@@ -29,8 +29,7 @@
     - Human
     - Moth
     - Reptilian
-    - Resomi # fluff/goob/mono
-    - SpElf
+    - Thaven
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

@@ -35,6 +35,8 @@ using Robust.Shared.Toolshed;
 using Robust.Shared.Utility;
 using System.Linq;
 using static Content.Shared.Configurable.ConfigurationComponent;
+using Content.Shared._Impstation.Thaven.Components;
+using Content.Server._Impstation.Thaven;
 
 namespace Content.Server.Administration.Systems
 {
@@ -65,6 +67,7 @@ namespace Content.Server.Administration.Systems
         [Dependency] private readonly AdminFrozenSystem _freeze = default!;
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly SiliconLawSystem _siliconLawSystem = default!;
+        [Dependency] private readonly ThavenMoodsSystem _moods = default!;
 
         private readonly Dictionary<ICommonSession, List<EditSolutionsEui>> _openSolutionUis = new();
 
@@ -389,21 +392,24 @@ namespace Content.Server.Administration.Systems
                     });
                 }
 
-                // open camera
-                args.Verbs.Add(new Verb()
+                if (TryComp<ThavenMoodsComponent>(args.Target, out var moods))
                 {
-                    Priority = 10,
-                    Text = Loc.GetString("admin-verbs-camera"),
-                    Message = Loc.GetString("admin-verbs-camera-description"),
-                    Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/vv.svg.192dpi.png")),
-                    Category = VerbCategory.Admin,
-                    Act = () =>
+                    args.Verbs.Add(new Verb()
                     {
-                        var ui = new AdminCameraEui(args.Target);
-                        _euiManager.OpenEui(ui, player);
-                    },
-                    Impact = LogImpact.Low
-                });
+                        Text = Loc.GetString("thaven-moods-ui-verb"),
+                        Category = VerbCategory.Admin,
+                        Act = () =>
+                        {
+                            var ui = new ThavenMoodsEui(_moods, EntityManager, _adminManager);
+                            if (!_playerManager.TryGetSessionByEntity(args.User, out var session))
+                                return;
+
+                            _euiManager.OpenEui(ui, session);
+                            ui.UpdateMoods(moods, args.Target);
+                        },
+                        Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Actions/actions_borg.rsi"), "state-laws"),
+                    });
+                }
             }
         }
 

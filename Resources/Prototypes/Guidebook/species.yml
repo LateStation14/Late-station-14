@@ -23,7 +23,7 @@
     - Avali
     - Felinid
     - Resomi
-    - SpElf
+    - Thaven
 
 - type: guideEntry
   id: Arachnid
@@ -90,5 +90,12 @@
   name: species-name-resomi
   text: "/ServerInfo/Guidebook/Mobs/_FloofStation/Resomi.xml"
   id: SpElf
+  id: Thaven
   name: Thaven
   text: "/ServerInfo/Guidebook/Mobs/SpElf.xml"
+  text: "/ServerInfo/_Impstation/Guidebook/Mobs/Thaven.xml"
+
+- type: guideEntry
+  id: Decapoid
+  name: Decapoid
+  text: "/ServerInfo/_Impstation/Guidebook/Mobs/Decapoid.xml"
