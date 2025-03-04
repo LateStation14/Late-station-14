@@ -1,0 +1,49 @@
+- type: gameMap
+  id: Torpedo
+  mapName: 'NSC Torpedo'
+  mapPath: /Maps/_LateStation/torpedo.yml
+  minPlayers: 3
+  maxPlayers: 20
+  stations:
+    Torpedo:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} NSC Torpedo {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_rod.yml
+        - type: StationCargoShuttle
+          path: /Maps/Shuttles/cargo.yml
+        - type: StationJobs
+          availableJobs:
+            #service
+            Bartender: [ 1, 1 ]
+            Botanist: [ 2, 2]
+            Chef: [ 1, 1 ]
+            Janitor: [ 1, 1 ]
+            Captain: [ 1, 1 ]
+            HeadOfPersonnel: [ 1, 1 ]
+            ServiceWorker: [ 2, 2 ]
+            #engineering
+            StationEngineer: [ 2, 2 ]
+            AtmosphericTechnician: [ 1, 1 ]
+            #medical
+            MedicalDoctor: [ 2, 2 ]
+            Chemist: [ 1, 1 ]
+            #science
+            Scientist: [ 2, 2 ]
+            #security
+            HeadOfSecurity: [ 1, 1 ]
+            SecurityOfficer: [ 3, 3 ]
+            Warden: [ 1, 1 ]
+            #supply
+            CargoTechnician: [ 2, 2 ]
+            SalvageSpecialist: [ 2, 2 ]
+            #civilian
+            Passenger: [ -1, -1 ]
+            Musician: [ 1, 1 ]
+            # silicon
+            Borg: [ 1, 1 ]
