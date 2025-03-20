@@ -16962,8 +16962,6 @@ entities:
         [head=1][color=#ff0000]High Command[/head][/color]
     - type: UserInterface
       actors:
-        enum.PaperUiKey.Key:
-        - invalid
     - type: ActiveUserInterface
 - proto: PinpointerSyndicateNuclear
   entities:
