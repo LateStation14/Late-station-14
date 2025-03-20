@@ -16632,38 +16632,6 @@ entities:
       parent: 502
     - type: Physics
       canCollide: False
-- proto: Morgue
-  entities:
-  - uid: 2994
-    components:
-    - type: Transform
-      pos: 12.5,-17.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 1857
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14673
-        moles:
-        - 1.7459903
-        - 6.568249
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
 - proto: Multitool
   entities:
   - uid: 3327
