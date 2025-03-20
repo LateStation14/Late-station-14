@@ -10689,23 +10689,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.7896385,-12.609798
       parent: 2
-- proto: EnergyShield
-  entities:
-  - uid: 1854
-    components:
-    - type: Transform
-      parent: 61
-    - type: Physics
-      canCollide: False
-    - type: Blocking
-      blockingToggleActionEntity: 1877
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 1877
-    - type: InsideEntityStorage
   - uid: 3282
     components:
     - type: Transform
