@@ -8419,7 +8419,6 @@ entities:
           occludes: True
           ents:
           - 3059
-          - 3019
           - 3046
           - 3018
           - 3056
