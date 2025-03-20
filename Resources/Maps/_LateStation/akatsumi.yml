@@ -9560,22 +9560,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 3332
-    components:
-    - type: Transform
-      pos: -4.3976245,-37.28805
-      parent: 2
-    - type: GasTank
-      toggleActionEntity: 3334
-    - type: Jetpack
-      toggleActionEntity: 3333
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 3333
-          - 3334
 - proto: ClusterWeh
   entities:
   - uid: 3173
