@@ -1,0 +1,39 @@
+- type: gameMap
+  id: Sierra
+  mapName: 'Sierra'
+  mapPath: /Maps/_LateStation/Sierra.yml
+  minPlayers: 0
+  maxPlayers: 8
+  stations:
+    Sierra:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Sierra Transport {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'SC'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency.yml
+        - type: StationJobs
+          availableJobs:
+            Captain: [ 1, 1 ]
+            HeadOfSecurity: [ 1, 1 ]
+            SecurityOfficer: [ 1, 2 ]
+            SecurityCadet: [ 1, 1 ]
+            CargoTechnician: [ 1, 1 ]
+            SalvageSpecialist: [ 1, 1 ]
+            Bartender: [ 1, 1 ]
+            Botanist: [ 1, 1 ]
+            Chef: [ 1, 1 ]
+            MedicalDoctor: [ 1, 2 ]
+            MedicalIntern: [ 1, 1 ]
+            Chemist: [ 1, 1 ]
+            Janitor: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            AtmosphericTechnician: [ 1, 1 ]
+            StationEngineer: [ 1, 2 ]
+            Scientist: [ 1, 1 ]
+            Passenger: [ -1, -1 ]
+            StationAi: [ 1, 1 ]
+
