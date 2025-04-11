@@ -26,6 +26,15 @@
         maxDistance: 2
   - type: UseDelay
     delay: 1.5
+# Latestation Start - Pen Pills
+  - type: ItemSlots
+    slots:
+      item:
+        name: pen-pill
+        whitelist:
+          tags:
+          - Pill
+# Latestation End
 
 - type: entity
   parent: Pen
