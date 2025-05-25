@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtWhiteWeddingDress
+  name: white wedding dress
+  description: An elegant dress, for that special day.
+  components:
+  - type: Sprite
+    sprite: _LateStation/Clothing/Uniforms/Jumpskirt/white_wedding_dress.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Uniforms/Jumpskirt/white_wedding_dress.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtFloralWeddingDress
+  name: floral wedding dress
+  description: A floral dress, for that special day.
+  components:
+  - type: Sprite
+    sprite: _LateStation/Clothing/Uniforms/Jumpskirt/floral_wedding_dress.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Uniforms/Jumpskirt/floral_wedding_dress.rsi
