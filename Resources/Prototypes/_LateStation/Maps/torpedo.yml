@@ -15,7 +15,7 @@
             prefixCreator: 'CST'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/_Latestation/Shuttles/emergency_torpedo.yml
-          - type: StationCargoShuttle
+        - type: StationCargoShuttle
           path: /Maps/_Latestation/Shuttles/cargo_torpedo.yml
         - type: StationJobs
           availableJobs: 
