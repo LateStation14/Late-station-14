@@ -93,6 +93,7 @@ namespace Content.IntegrationTests.Tests
             "Convex",
             "Relic",
             "dm01-entryway",
+            "Torpedo", // Latestation, low pop station shuttle
         };
 
         /// <summary>
