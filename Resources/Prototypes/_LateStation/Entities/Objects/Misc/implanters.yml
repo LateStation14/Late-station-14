@@ -1,0 +1,11 @@
+# Alone. a new implant sits.
+# hrgn. fatass slug.
+
+- type: entity
+  id: AdmemeStorageImplanter
+  name: BluespaceStorage implanter
+  suffix: Admeme
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+    - type: Implanter
+      implant: AdmemeStorageImplant
