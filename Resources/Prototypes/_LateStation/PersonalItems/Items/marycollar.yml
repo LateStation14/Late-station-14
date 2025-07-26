@@ -1,0 +1,28 @@
+- type: entity
+  parent: Clothing
+  id: PersonalItemMaryCollar
+  name: busted shock collar
+  description: An electric collar that would shock when signalled. Looks like this one is broken.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Clothing/Neck/Misc/shock_collar.rsi
+    state: icon
+  - type: Clothing
+    sprite: Clothing/Neck/Misc/shock_collar.rsi
+    stripDelay: 10
+    equipDelay: 5 # to avoid accidentally falling into the trap associated with SelfUnremovableClothing, even though I removed it. Parity!!!!!!!!
+    quickEquip: true
+    slots:
+    - neck
+
+- type: loadout
+  id: PersonalItemMaryCollar
+  storage:
+    back:
+      - PersonalItemMaryCollar
+  effects:
+  - !type:PersonalItemLoadoutEffect
+    character:
+    - Mary Whitewitch

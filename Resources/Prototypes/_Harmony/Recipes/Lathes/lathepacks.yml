@@ -73,9 +73,3 @@
   recipes:
   - CassetteTape # DeltaV
   - TapeRecorder # DeltaV
-
-## Tiles
-- type: latheRecipePack
-  id: HarmonyFloorTilesStatic
-  recipes:
-  - FloorTileItemTechmaintDark # Xeno playtest

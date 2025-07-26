@@ -1,50 +1,91 @@
-<p align="center"> <img alt="LateStation" src="https://raw.githubusercontent.com/LateStation14/Late-station-14/refs/heads/master/Resources/Textures/Logo/logo.png" /></p>
+<p align="center">
+  <img alt="LateStation" src="https://raw.githubusercontent.com/LateStation14/Late-station-14/refs/heads/master/Resources/Textures/Logo/logo.png" />
+</p>
 
-LateStation is a fork of [Harmony](https://github.com/ss14-harmony/ss14-harmony). We aim to make our own station with our own content using Harmony as a base since most of our (now) playerbase come from Harmony.
-Right now there isn't much different from the Harmony fork but that will change in the future, there might be some remnants still but thats WIP.
-If you're interested in helping out just ask around in the Liltenhead discord and you'll find us pretty fast.
+# LateStation14
 
-Space Station 14 is a remake of SS13 that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), a homegrown engine written in C#.
+**LateStation** is a custom content fork of the official [Space Station 14](https://github.com/space-wizards/space-station-14) project. We aim to create our own gameplay experience, with original mechanics, stations, and assets — all while staying aligned with the upstream SS14 codebase.
 
-## Links
+We are currently building our own identity on top of the core SS14 platform. While much of the game is still similar to upstream, LateStation is actively developing unique systems, content, and balance changes to support our own long-term vision.
 
-[LateStation](http://www.lateStation14.space/) | [Website (SS14)](https://spacestation14.io/) | [Steam (SS14)](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone Download (SS14)](https://spacestation14.io/about/nightlies/) | [Resources (LateStation)](https://www.lateStation14.space/)
+**Space Station 14** is a remake of the classic SS13, running on [RobustToolbox](https://github.com/space-wizards/RobustToolbox) — an open-source game engine written in C# and built specifically for multiplayer, tile-based simulation games like SS14.
 
-## Documentation/Wiki
+---
 
-SS14 [docs site](https://docs.spacestation14.io/) has documentation on SS14's content, engine, game design, and more. It also has lots of resources for new contributors to the project.
+## 🔗 Links
 
-## Contributing
+- 🌐 LateStation Website: http://www.lateStation14.space/
+- 🧭 SS14 Website: https://spacestation14.io/
+- 🛠️ SS14 Standalone Download: https://spacestation14.io/about/nightlies/
+- 🎮 SS14 on Steam: https://store.steampowered.com/app/1255460/Space_Station_14/
+- 📁 LateStation Resources: https://www.lateStation14.space/
 
-We are happy to accept contributions from anybody. Get in Discord if you want to help and don't be afraid to ask for help either.
+---
 
-Make sure to read our contributing guidelines in [CONTRIBUTING.md](/CONTRIBUTING.md) if you are new to LateStation!
+## 📚 Documentation & Wiki
 
-## Building
+- SS14 Docs: https://docs.spacestation14.io/ — Covers the engine, content, game design, mapping, modding, and more.
+- LateStation Contributions: See CONTRIBUTING.md — Read this first if you’re new and want to help out!
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions of all kinds — coding, spriting, mapping, balancing, and feedback.
+
+- Check out our CONTRIBUTING.md file.
+- Open a pull request or issue if you’d like to get involved.
+
+---
+
+## 🧱 Building the Project
 
 1. Clone this repo:
-```shell
-git clone https://github.com/space-wizards/space-station-14.git
-```
-2. Go to the project folder and run `RUN_THIS.py` to initialize the submodules and load the engine:
-```shell
-cd space-station-14
-python RUN_THIS.py
-```
-3. Compile the solution:
 
-Build the server using `dotnet build`.
+   git clone https://github.com/LateStation14/Late-station-14.git
 
-[More detailed instructions on building the project.](https://docs.spacestation14.com/en/general-development/setup.html)
+2. Enter the project folder and run the setup script:
 
-## License
+   cd Late-station-14
+   python RUN_THIS.py
 
-Code contributed to this repository after commit `7d6a6073f9c1a3954d17b78d535d43659307cbe9` is licensed under the **GNU Affero General Public License version 3.0** license, unless otherwise stated. See [LICENSE-AGPLv3.txt](LICENSE-AGPLv3.txt).
+3. Build the solution:
 
-Code contributed to this repository before commit `7d6a6073f9c1a3954d17b78d535d43659307cbe9` is licensed under the **MIT** license.
-See [LICENSE-MIT.TXT](LICENSE-MIT.txt).
+   dotnet build
 
-Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and the copyright in the metadata file. [Example](https://github.com/lateStation14/lateStation14/blob/master/Resources/Textures/_LateStation/Clothing/Uniforms/Jumpsuit/hop_turtle.rsi/meta.json).
+For full build and IDE setup instructions, see the SS14 Developer Docs:
+https://docs.spacestation14.com/en/general-development/setup.html
 
-> [!NOTE]
-> Some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
+---
+
+## ⚖️ License
+
+### 📜 Code
+
+All code in this repository is licensed under the MIT License, including any code forked from Wizards Den's Space Station 14 (https://github.com/space-wizards/space-station-14). This includes all of LateStation’s engine, content, and custom systems.
+
+Some content in this repository also originates from other SS14 forks, including:
+- `_AXOLOTL/` — from [Axolotl](https://github.com/Axolotl-MRP/axolotl-mrp-14)
+- `_CD/` — from [Cosmatic Drift](https://github.com/cosmatic-drift-14/cosmatic-drift)
+- `_DV/` — from [Delta-V](https://github.com/DeltaV-Station/Delta-v)
+- `_Harmony/` — from [Harmony](https://github.com/ss14-harmony/ss14-harmony)
+- `_NF/` — from [Frontier](https://github.com/new-frontiers-14/frontier-station-14)
+
+These contributions are likewise licensed under the MIT License, and may be modified to fit LateStation’s design and gameplay direction.
+
+See LICENSE.txt for full license details.
+
+### 🖼️ Assets
+
+- Most assets (sprites, sounds, etc.) are licensed under Creative Commons Attribution-ShareAlike 3.0:
+  https://creativecommons.org/licenses/by-sa/3.0/
+  - Requires proper attribution
+  - Requires derivative works to use the same license (share-alike)
+- Each asset directory includes a metadata file specifying its license and authorship.
+  Example: `hop_turtle.rsi/meta.json`
+
+⚠️ **Note**: Some assets may be under non-commercial licenses, such as:
+https://creativecommons.org/licenses/by-nc-sa/3.0/
+
+These assets **cannot be used in commercial projects**. If you intend to use this project commercially, you will need to review and replace these assets.
+

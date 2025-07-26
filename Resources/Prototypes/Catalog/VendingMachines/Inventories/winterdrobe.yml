@@ -26,6 +26,38 @@
     ClothingHeadHatCanadaBeanie: 4
     ClothingHeadHatSantahat: 2
     ClothingHeadHatXmasCrown: 2
+    ClothingUniformTurtleneckColorWhite: 2 ## Latestation
+    ClothingUniformTurtleneckColorGrey: 2 ## Latestation
+    ClothingUniformTurtleneckColorBlack: 2 ## Latestation
+    ClothingUniformTurtleneckColorBlue: 2 ## Latestation
+    ClothingUniformTurtleneckColorDarkBlue: 2 ## Latestation
+    ClothingUniformTurtleneckColorTeal: 2 ## Latestation
+    ClothingUniformTurtleneckColorGreen: 2 ## Latestation
+    ClothingUniformTurtleneckColorDarkGreen: 2 ## Latestation
+    ClothingUniformTurtleneckColorOrange: 2 ## Latestation
+    ClothingUniformTurtleneckColorPink: 2 ## Latestation
+    ClothingUniformTurtleneckColorRed: 2 ## Latestation
+    ClothingUniformTurtleneckColorYellow: 2 ## Latestation
+    ClothingUniformTurtleneckColorPurple: 2 ## Latestation
+    ClothingUniformTurtleneckColorLightBrown: 2 ## Latestation
+    ClothingUniformTurtleneckColorBrown: 2 ## Latestation
+    ClothingUniformTurtleneckColorMaroon: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorWhite: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorGrey: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorBlack: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorBlue: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorDarkBlue: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorTeal: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorGreen: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorDarkGreen: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorOrange: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorPink: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorRed: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorYellow: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorPurple: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorLightBrown: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorBrown: 2 ## Latestation
+    ClothingUniformTurtleneckSkirtColorMaroon: 2 ## Latestation
 
   emaggedInventory:
     ClothingNeckScarfStripedSyndieGreen: 3

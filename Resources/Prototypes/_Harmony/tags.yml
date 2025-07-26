@@ -15,3 +15,7 @@
 # Tag used for pride mantles.
 - type: Tag
   id: WhitelistChameleonPrideMantle
+
+#Tag used for celebratory sandals.
+- type: Tag
+  id: WhitelistChameleonPrideSandal

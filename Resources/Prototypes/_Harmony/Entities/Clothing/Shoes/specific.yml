@@ -21,3 +21,25 @@
     - ClothingShoesDuckyGaloshes
     - WhitelistChameleon
     - ClothMade
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesChameleonPride
+  name: celebration sandals
+  suffix: Chameleon
+  description: A colorful pair of sandals celebrating pride. The bracelet is configurable.
+  components:
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: Sprite
+    sprite: _Harmony/Clothing/Shoes/Misc/rainbowsandals.rsi
+  - type: Clothing
+    sprite: _Harmony/Clothing/Shoes/Misc/rainbowsandals.rsi
+  - type: ChameleonClothing
+    slot: [FEET]
+    default: ClothingShoesSandalRainbow
+    requireTag: WhitelistChameleonPrideSandal
+  - type: UserInterface
+    interfaces:
+      enum.ChameleonUiKey.Key:
+        type: ChameleonBoundUserInterface

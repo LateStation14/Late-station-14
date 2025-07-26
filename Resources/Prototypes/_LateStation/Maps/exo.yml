@@ -1,0 +1,9 @@
+- type: mapModification
+  id: ExoPermaPrisoner
+  applyOn:
+  - Exo
+  additions:
+  - prototype: SpawnPointPermaPrisoner
+    position: -51, -14
+  - prototype: SpawnPointPermaPrisoner
+    position: -53, -15

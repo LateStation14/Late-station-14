@@ -1,47 +1,47 @@
 ﻿- type: decal
-  id: SpaceStationSign1
+  id: SpaceStationSign1Harmony
   tags: ["station"]
   sprite:
     sprite: _Harmony/Decals/ss14sign.rsi
     state: ss14sign1
 
 - type: decal
-  id: SpaceStationSign2
+  id: SpaceStationSign2Harmony
   tags: ["station"]
   sprite:
     sprite: _Harmony/Decals/ss14sign.rsi
     state: ss14sign2
 
 - type: decal
-  id: SpaceStationSign3
+  id: SpaceStationSign3Harmony
   tags: ["station"]
   sprite:
     sprite: _Harmony/Decals/ss14sign.rsi
     state: ss14sign3
 
 - type: decal
-  id: SpaceStationSign4
+  id: SpaceStationSign4Harmony
   tags: ["station"]
   sprite:
     sprite: _Harmony/Decals/ss14sign.rsi
     state: ss14sign4
 
 - type: decal
-  id: SpaceStationSign5
+  id: SpaceStationSign5Harmony
   tags: ["station"]
   sprite:
     sprite: _Harmony/Decals/ss14sign.rsi
     state: ss14sign5
 
 - type: decal
-  id: SpaceStationSign6
+  id: SpaceStationSign6Harmony
   tags: ["station"]
   sprite:
     sprite: _Harmony/Decals/ss14sign.rsi
     state: ss14sign6
 
 - type: decal
-  id: SpaceStationSign7
+  id: SpaceStationSign7Harmony
   tags: ["station"]
   sprite:
     sprite: _Harmony/Decals/ss14sign.rsi

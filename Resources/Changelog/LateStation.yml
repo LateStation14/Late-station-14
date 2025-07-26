@@ -496,3 +496,77 @@ Entries:
       message: Added a personal moth cloak item for Austin.
   id: 63
   time: '2025-06-29T18:57:49.0000000+00:00'
+- author: DoggowithaKeyboard
+  changes:
+    - type: Add
+      message: Added floodlights to the engivend.
+    - type: Fix
+      message: Added the RPD back to atmospheric techicians' lockers.
+  id: 64
+  time: '2025-06-30T08:19:35.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Add
+      message: Added four new masks to the AutoDrobe's inventory.
+    - type: Add
+      message: (Re)added sweater jumpsuits and skirts from Wizden.
+  id: 65
+  time: '2025-06-30T08:33:57.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Fix
+      message: >-
+        Removes the Syndicate-Brand Hair Repellant from the PAYDAY masks,
+        meaning you won't randomly become bald.
+  id: 66
+  time: '2025-07-01T21:41:02.0000000+00:00'
+- author: DoggowithaKeyboard
+  changes:
+    - type: Add
+      message: Anomaly Locators can now be found in scientist lockers!
+  id: 67
+  time: '2025-07-03T19:52:50.0000000+00:00'
+- author: AryaRaiin
+  changes:
+    - type: Add
+      message: celebratory sandals
+  id: 68
+  time: '2025-07-03T22:29:35.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Add
+      message: >-
+        Added the Shock Collar, found by breaking the Warden's locker- I mean,
+        opening it with your ID.
+    - type: Add
+      message: Introduces a personal item for Mary Whitewitch.
+  id: 69
+  time: '2025-07-08T21:04:22.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Tweak
+      message: >-
+        The brigmedic syringe gun now holds three syringes, like its
+        counterpart.
+  id: 70
+  time: '2025-07-08T22:04:43.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Add
+      message: >-
+        Added a preem new accent for you chooms. Try to use it 'fore you get
+        flatlined like a gonk.
+  id: 71
+  time: '2025-07-09T08:22:06.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Fix
+      message: Made the personal item for Mary Whitewitch actually Work™
+  id: 72
+  time: '2025-07-12T15:02:42.0000000+00:00'
+- author: Boaz1111
+  changes:
+    - type: Fix
+      message: Fixed undergarments not working.
+  id: 73
+  time: '2025-07-17T19:25:41.0000000+00:00'

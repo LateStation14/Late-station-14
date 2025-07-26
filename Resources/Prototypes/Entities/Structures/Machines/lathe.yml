@@ -695,7 +695,6 @@
     runningState: building
     staticPacks:
     - FloorTilesStatic
-    - HarmonyFloorTilesStatic # Harmony
   - type: MaterialStorage
     whitelist:
       tags:

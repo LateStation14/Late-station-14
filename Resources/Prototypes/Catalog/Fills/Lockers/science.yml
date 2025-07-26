@@ -17,6 +17,7 @@
     - id: ClothingMaskSterile
     - id: ClothingOuterCoatRnd
     - id: AnomalyScanner
+    - id: AnomalyLocator #Latestation change
     - id: NodeScanner
     - id: NetworkConfigurator
       prob: 0.5

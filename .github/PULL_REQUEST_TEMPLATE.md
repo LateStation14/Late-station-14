@@ -1,38 +1,62 @@
-<!-- If you are new to the LateStation repository, please read the [Contributing Guidelines](https://github.com/LateStation14/Late-station-14/blob/master/CONTRIBUTING.md) -->
+<!-- New to LateStation? Please read our CONTRIBUTING guide:
+https://github.com/LateStation14/Late-station-14/blob/master/CONTRIBUTING.md -->
 
 ## About the PR
-<!-- What did you change? Describe your changes here. -->
+<!--
+What does this PR do?
+Briefly summarize the changes, features, or fixes introduced.
+-->
 
 ## Why / Balance
-<!-- Discuss how this would affect game balance or explain why it was changed. Link any relevant discussions or issues. -->
+<!--
+Why was this change made?
+Does it affect game balance, gameplay design, performance, or user experience?
+Include links to discussions or issues if relevant.
+-->
 
 ## Technical Details
-<!-- Provide a summary of code changes for easier review. -->
+<!--
+Explain any significant code-level details or logic.
+Mention refactors, edge cases, or anything maintainers should be aware of.
+-->
 
-## Media
-<!-- Attach media (screenshots, videos, etc.) if the PR makes in-game changes (e.g., clothing, items, features). Small fixes or refactors are exempt. -->
+## Media (if applicable)
+<!--
+Include screenshots or videos if this PR adds or changes anything visual.
+If this PR is purely code, small fixes, or backend-only, you can omit this.
+-->
 
 ## Requirements
-<!-- Confirm the following by placing an X in the square brackets.
-Correct: [X]
-Incorrect: [ ] [X ] [ X] -->
-- [ ] I have tested all added content and changes.
-- [ ] I have added media to this PR or it does not require an in-game showcase.
-<!-- Not following the above may result in your PR being closed at the maintainer's discretion. -->
+<!-- Confirm the following by placing an X inside each [ ] -->
+- [ ] I have tested all added content and code changes.
+- [ ] I have added media to this PR, or it does not require an in-game showcase.
+- [ ] I understand that by submitting this PR, my code contributions are licensed under the MIT License used by LateStation.
+
+<!-- PRs that do not follow these requirements may be delayed or closed. -->
 
 ## Breaking Changes
-<!-- List any breaking changes, such as namespace changes, public class/method/field modifications, or prototype renames. Include instructions for fixing them. -->
+<!--
+List any breaking changes to code structure or content.
+This includes prototype name changes, class renames, or field changes that could affect downstream forks.
+If there are none, write: "None"
+-->
 
 ## Changelog
-<!-- Add a changelog entry below to inform players about new features or gameplay-affecting changes.
-IMPORTANT: The automated changelog bot (Weh Bot) only reads entries AFTER the ':cl:' marker in this section.
-- Use the exact format: '- type: message' (e.g., '- add: Added a new feature').
-- Valid types are: 'add', 'remove', 'tweak', 'fix'.
-- Do NOT use these keywords (add, remove, tweak, fix) casually elsewhere in the PR body, or the bot might misinterpret them.
+<!--
+List player-facing changes below using this exact format.
+Only entries after the ':cl:' tag will be picked up by Weh Bot.
+
+Valid types: add, remove, tweak, fix
+Use lowercase only (e.g., 'add', not 'Add').
+
+Example:
+:cl:
+- add: Added new medical scanner UI.
+- fix: Fixed lockers not opening.
 -->
 
 :cl:
 - add: Added a new weapon.
 - fix: Fixed a bug with the HUD.
-- remove: Removed the Maints Slasher
-- Tweak: tweaked the AI to teleport bread
+- remove: Removed the Maints Slasher.
+- tweak: Tweaked the AI to teleport bread.

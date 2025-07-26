@@ -1,0 +1,87 @@
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskClownDallas
+  abstract: false
+  name: USA clown mask
+  description: Fun fact, this used to be given to patients in the medbay that haven't recieved treatment yet.
+  components:
+  - type: Sprite
+    sprite: _LateStation/Clothing/Mask/dallas.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Mask/dallas.rsi
+  - type: BreathMask
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - ClownMask
+    - HamsterWearable
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Snout
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskClownChains
+  abstract: false
+  name: purple clown mask
+  description: Contrary to popular belief, you can't use this to secure your bike.
+  components:
+  - type: Sprite
+    sprite: _LateStation/Clothing/Mask/chains.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Mask/chains.rsi
+  - type: BreathMask
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - ClownMask
+    - HamsterWearable
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Snout
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskClownHoxton
+  abstract: false
+  name: pink clown mask
+  description: It smells like a time paradox waiting to happen.
+  components:
+  - type: Sprite
+    sprite: _LateStation/Clothing/Mask/hoxton.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Mask/hoxton.rsi
+  - type: BreathMask
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - ClownMask
+    - HamsterWearable
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Snout
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskClownWolf
+  abstract: false
+  name: bloody clown mask
+  description: There's not actually blood on it. Sure looks like it, though.
+  components:
+  - type: Sprite
+    sprite: _LateStation/Clothing/Mask/wolf.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Mask/wolf.rsi
+  - type: BreathMask
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - ClownMask
+    - HamsterWearable
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Snout

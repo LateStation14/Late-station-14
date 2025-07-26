@@ -163,7 +163,7 @@
   name: steal-target-groups-forensic-scanner
   sprite:
     sprite: Objects/Devices/forensic_scanner.rsi
-    state: forensicnew
+    state: icon
 
 - type: stealTargetGroup
   id: FlippoEngravedLighter
@@ -276,6 +276,13 @@
   sprite:
     sprite: Objects/Devices/cartridge.rsi
     state: cart-sec
+
+- type: stealTargetGroup
+  id: ClothingNeckShockCollar
+  name: steal-target-groups-shock-collar
+  sprite:
+    sprite: Clothing/Neck/Misc/shock_collar.rsi
+    state: icon
 
 #Thief structures
 

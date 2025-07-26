@@ -16,8 +16,8 @@
   - NpcFactionMember
   # traits
   # - LegsParalyzed (you get healed)
+  - BlackAndWhiteOverlay
   - LightweightDrunk
-  - Monochromacy
   - Muted
   - Narcolepsy
   - Pacified
@@ -62,6 +62,7 @@
   - SouthernAccent
   - SpanishAccent
   - StutteringAccent
+  - StreetpunkAccent
   blacklist:
     components:
     - AttachedClothing # helmets, which are part of the suit
