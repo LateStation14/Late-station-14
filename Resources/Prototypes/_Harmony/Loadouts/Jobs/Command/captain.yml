@@ -9,8 +9,20 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtCaptainTurtleneckHarmony
 
+- type: loadout # Harmony
+  id: CaptainHawaiianHarmony
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCaptainHawaiianHarmony
+
 # Outer clothing
 - type: loadout
   id: CaptainArmoredWinterCoatHarmony
   equipment:
     outerClothing: ClothingOuterWinterCapArmored
+
+# Head
+- type: loadout # Harmony
+  id: BeretCaptainHarmony
+  equipment:
+    head: ClothingHeadHatBeretCaptainHarmony
+

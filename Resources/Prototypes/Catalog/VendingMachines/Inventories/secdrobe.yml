@@ -16,8 +16,6 @@
     ClothingUniformJumpsuitSecGrey: 3
     ClothingUniformJumpskirtSecGrey: 3
     ClothingUniformJumpsuitSecBlue: 3
-    ClothingHeadHatBeretSecurityBlueHarmony: 3 # Harmony
-    ClothingHeadHatSecSoftBlueHarmony: 3 # Harmony
     ClothingHeadsetSecurity: 3
     ClothingOuterWinterSec: 2
     ClothingOuterArmorBasic: 2
@@ -29,7 +27,6 @@
     ClothingHeadHelmetJustice: 1
   contrabandInventory:
     ClothingMaskClownSecurity: 1
-    ClothingOuterCoatAMG: 1
     ClothingMaskMimeSecurity: 1
     ToyFigurineSecurity: 1
     ToyFigurineWarden: 1
@@ -38,3 +35,5 @@
     ToyPlushieThriz: 1 ## Latestation
     ToyPlushieAtlas: 1 ## Latestation
     ToyPlushieJuan: 1 ##Latestation
+    ClothingMaskGasSecurityMetroCop: 2
+    ClothingOuterArmorMetroCop: 2

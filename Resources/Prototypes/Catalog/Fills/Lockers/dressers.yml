@@ -22,8 +22,7 @@
     contents:
       - id: ClothingUniformJumpsuitChiefEngineerTurtle
       - id: ClothingUniformJumpskirtChiefEngineerTurtle
-#      - id: ClothingHeadHatBeretEngineering
-      - id: ClothingHeadHatBeretChiefEngineerHarmony # Harmony Change
+      - id: ClothingHeadHatBeretEngineering
       - id: ClothingOuterWinterCE
       - id: ClothingNeckCloakCe
 
@@ -51,7 +50,6 @@
   - type: StorageFill
     contents:
       - id: ClothingHeadHatHopcap
-      - id: ClothingHeadHatBeretHeadofPersonnelHarmony # Harmony Change
       - id: ClothingOuterWinterHoP
       - id: ClothingEyesGlasses
       - id: ClothingNeckCloakHop
@@ -94,8 +92,7 @@
   components:
   - type: StorageFill
     contents:
-#      - id: ClothingHeadHatBeretRND
-      - id: ClothingHeadHatBeretResearchDirectorHarmony # Harmony Change
+      - id: ClothingHeadHatBeretRND
       - id: ClothingHandsGlovesColorPurple
       - id: ClothingEyesGlasses
       - id: ClothingOuterWinterRD

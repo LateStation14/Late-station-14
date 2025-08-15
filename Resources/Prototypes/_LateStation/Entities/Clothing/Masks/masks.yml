@@ -85,3 +85,29 @@
   - type: HideLayerClothing
     slots:
     - Snout
+
+- type: entity
+  parent: [ClothingMaskGas, BaseSecurityContraband] # i'm still not sure if i should put this as a helmet or gas mask, but im leaning towards gas mask
+  id: ClothingMaskGasSecurityMetroCop
+  name: enforcer gas mask
+  description: Not to be confused with a shotgun.
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _LateStation/Clothing/Mask/metrocop.rsi
+  - type: Clothing
+    sprite: _LateStation/Clothing/Mask/metrocop.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide

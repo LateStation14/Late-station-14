@@ -3,7 +3,7 @@
   id: Trinkets
   name: loadout-group-trinkets
   minLimit: 0
-  maxLimit: 3
+  maxLimit: 5
   loadouts:
   - FlowerWreath
   - Hairflower
@@ -69,6 +69,7 @@
   - TowelStripedOrange # Harmony
   - Cane # Harmony
   - TapeRecorder # DeltaV / Harmony
+  - ThrowingBrickSoft
 
 - type: loadoutGroup
   id: Glasses

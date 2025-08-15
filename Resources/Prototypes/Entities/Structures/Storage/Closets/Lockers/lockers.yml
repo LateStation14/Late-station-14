@@ -17,6 +17,8 @@
       path: /Audio/Effects/woodenclosetclose.ogg
     openSound:
       path: /Audio/Effects/woodenclosetopen.ogg
+  - type: Paintable
+    group: null # not shaped like other lockers
 
 # Basic
 - type: entity
@@ -190,6 +192,8 @@
     node: done
     containers:
     - entity_storage
+  - type: Paintable
+    group: null
 
 - type: entity
   id: LockerFreezer
@@ -352,10 +356,8 @@
     stateBaseClosed: brigmedic
     stateDoorOpen: armory_open
     stateDoorClosed: brigmedic_door
-# Start of Harmony Change: Removes Access Reader
-#  - type: AccessReader
-#    access: [["Medical"]]
-# End of Change
+  - type: AccessReader
+    access: [["Medical"]]
 
 # Security Officer
 - type: entity

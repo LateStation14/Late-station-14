@@ -1,5 +1,4 @@
-﻿# Hijacked paceStationSign* ID for Resources/Prototypes/_Harmony/Decals/ss14sign.yml
-- type: decal
+﻿- type: decal
   id: SpaceStationSign1
   tags: ["station"]
   sprite:

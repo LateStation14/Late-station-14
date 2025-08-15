@@ -6,15 +6,8 @@
     mode: SnapgridCenter
   components:
   - type: Sprite
-# Start of Harmony Change: Updates Sprite Pathing for the Singularity Generator
-#    sprite: Structures/Power/Generation/Singularity/generator.rsi
-#    state: icon
-    sprite: _Harmony/Structures/Power/Generation/Singularity/generator.rsi
-    layers:
-    - state: icon
-    - state: icon-unshaded
-      shader: unshaded
-# End of Harmony Change
+    sprite: Structures/Power/Generation/Singularity/generator.rsi
+    state: icon
   - type: SingularityGenerator
   - type: InteractionOutline
   - type: Clickable

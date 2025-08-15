@@ -368,11 +368,9 @@
   description: A sturdy, utilitarian winter coat designed to protect a head of security from any brig-bound threats and hypothermic events.
   components:
   - type: Sprite
-#    sprite: Clothing/OuterClothing/WinterCoats/coathosarmored.rsi # Commented out on Harmony
-    sprite: _Harmony/Clothing/OuterClothing/WinterCoats/coathosarmored.rsi # Updated sprite pathing for Harmony
+    sprite: Clothing/OuterClothing/WinterCoats/coathosarmored.rsi
   - type: Clothing
-#    sprite: Clothing/OuterClothing/WinterCoats/coathosarmored.rsi # Commented out on Harmony
-    sprite: _Harmony/Clothing/OuterClothing/WinterCoats/coathosarmored.rsi # Updated sprite pathing for Harmony
+    sprite: Clothing/OuterClothing/WinterCoats/coathosarmored.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterHOS
 ##########################################################
@@ -560,14 +558,13 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterPara
 
-# Harmony Change: Updated the sprite pathing for the QM spriting update
 - type: entity
   parent: [ClothingOuterWinterCoatToggleable, BaseCommandContraband]
   id: ClothingOuterWinterQM
   name: quartermaster's winter coat
   components:
   - type: Sprite
-    sprite: _Harmony/Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
     layers:
     - state: QM-icon
   - type: Item
@@ -577,7 +574,7 @@
       right:
       - state: QM-inhand-right
   - type: Clothing
-    sprite: _Harmony/Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
     clothingVisuals:
       outerClothing:
       - state: QM-equipped-OUTERCLOTHING
@@ -722,7 +719,6 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterSci
 
-# Harmony Change: Updated Sprite Pathing for security resprite update
 ################################################################
 - type: entity
   parent: [ClothingOuterArmorWarden, ClothingOuterWinterCoatToggleable, BaseSecurityContraband]
@@ -731,9 +727,9 @@
   description: A sturdy, utilitarian winter coat designed to protect a warden from any brig-bound threats and hypothermic events.
   components:
   - type: Sprite
-    sprite: _Harmony/Clothing/OuterClothing/WinterCoats/coatwardenarmored.rsi
+    sprite: Clothing/OuterClothing/WinterCoats/coatwardenarmored.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/OuterClothing/WinterCoats/coatwardenarmored.rsi
+    sprite: Clothing/OuterClothing/WinterCoats/coatwardenarmored.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterWarden
 ################################################################

@@ -6,7 +6,7 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobQuartermaster
-      time: 10800 #20 hrs
+      time: 72000 #20 hrs
 
 # Jumpsuit
 - type: loadout
@@ -53,11 +53,8 @@
 
 - type: loadout
   id: QuartermasterMantle
-  equipment: 
+  equipment:
     neck: ClothingNeckMantleQM
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterQM
 
 - type: startingGear
   id: QuartermasterMantle

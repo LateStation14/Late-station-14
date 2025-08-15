@@ -6,7 +6,7 @@
     requirement:
       !type:DepartmentTimeRequirement
       department: Science
-      time: 10800 #20 hrs
+      time: 216000 #60 hrs
 
 # Head
 - type: startingGear
@@ -17,9 +17,6 @@
 - type: loadout
   id: ScientificBeret
   startingGear: ScientificBeret
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorResearcher
 
 - type: loadout
   id: RoboticistCap
@@ -61,17 +58,11 @@
 
 - type: loadout
   id: SeniorResearcherJumpsuit
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorResearcher
   equipment:
     jumpsuit: ClothingUniformJumpsuitSeniorResearcher
 
 - type: loadout
   id: SeniorResearcherJumpskirt
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorResearcher
   equipment:
     jumpsuit: ClothingUniformJumpskirtSeniorResearcher
 
@@ -119,9 +110,6 @@
 
 - type: loadout
   id: SeniorResearcherLabCoat
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorResearcher
   equipment:
     outerClothing: ClothingOuterCoatLabSeniorResearcher
 
@@ -150,8 +138,5 @@
 
 - type: loadout
   id: SeniorResearcherPDA
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorResearcher
   equipment:
     id: SeniorResearcherPDA

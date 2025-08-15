@@ -15,9 +15,8 @@
   - Maintenance
   - Bar
   - Kitchen
-  - Hydroponics # Harmony-specific access tweak
-  # extendedAccess:
-  # - Hydroponics
+  extendedAccess:
+  - Hydroponics
 
 - type: startingGear
   id: ServiceWorkerGear

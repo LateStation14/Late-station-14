@@ -49,3 +49,4 @@ rcd-component-vents = Vents
 rcd-component-deconstruct = deconstruct
 rcd-component-floor-steel = steel tile
 rcd-component-plating = hull plate
+rcd-component-pumpsvalves = Pumps & Valves

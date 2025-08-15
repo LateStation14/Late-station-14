@@ -25,3 +25,37 @@
         Blunt: 10
   - type: StaminaDamageOnCollide
     damage: 10
+
+- type: entity
+  parent: BaseItem
+  id: ThrowingBrickSoft
+  name: brick
+  description: It's a crumbling brick. It'll probably last, but won't really do much.
+  components:
+  - type: Sprite
+    sprite: _LateStation/Objects/Weapons/Throwable/brick.rsi
+    state: icon
+  - type: Appearance
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.2
+        density: 5
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  - type: LandAtCursor
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: StaminaDamageOnCollide
+    damage: 15
+
+- type: loadout
+  id: ThrowingBrickSoft
+  storage:
+    back:
+    - ThrowingBrickSoft

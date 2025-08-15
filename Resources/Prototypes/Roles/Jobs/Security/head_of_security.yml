@@ -6,15 +6,16 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobWarden
-      time: 10800 #3hrs
+      time: 3600 #1 hr
+    - !type:RoleTimeRequirement
+      role: JobDetective
+      time: 3600 #1 hr, knowing how to use the tools is important
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
-      time: 0 #0 hrs
+      time: 18000 #5 hrs
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 36000 #10 hrs
-    - !type:OverallPlaytimeRequirement
-      time: 43200 #12 hrs
+      time: 36000 # 10 hrs
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
@@ -45,7 +46,7 @@
     id: HoSPDA
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltSecurity
-    pocket1: WeaponDisabler
+    pocket1: WeaponPistolMk58
   storage:
     back:
     - Flash

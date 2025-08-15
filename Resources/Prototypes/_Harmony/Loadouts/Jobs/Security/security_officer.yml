@@ -11,9 +11,6 @@
 
 - type: loadout
   id: SeniorOfficerBeretHarmony
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
   equipment:
     head: ClothingHeadHatBeretSecuritySeniorOfficerHarmony
 
@@ -25,5 +22,5 @@
 # Jumpsuit
 - type: loadout
   id: JumpsuitSecBlue
-  equipment: 
+  equipment:
     jumpsuit: ClothingUniformJumpsuitSecBlue

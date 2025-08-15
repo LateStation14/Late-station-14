@@ -101,7 +101,7 @@
   - type: StationEvent
     reoccurrenceDelay: 1
     earliestStart: 12
-    minimumPlayers: 25
+    minimumPlayers: 5
   - type: MeteorSwarm
 
 - type: entity

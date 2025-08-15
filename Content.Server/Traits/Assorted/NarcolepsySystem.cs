@@ -1,5 +1,5 @@
 using Content.Shared.Damage.Events; // LateStation edit
-using Content.Server.StatusEffectNew;
+using Content.Shared.StatusEffectNew;
 using Content.Shared.Bed.Sleep;
 using Robust.Shared.Random;
 
@@ -64,4 +64,5 @@ public sealed class NarcolepsySystem : EntitySystem
     {
         args.Prefix = ent.Comp.ForceSaySleepDataset;
     }
+    // End of LateStation
 }

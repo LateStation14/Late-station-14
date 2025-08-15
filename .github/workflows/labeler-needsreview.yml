@@ -7,10 +7,15 @@ on:
 jobs:
   add_label:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
-    - uses: actions-ecosystem/action-add-labels@v1
+    - if: ${{ github.event_name == 'pull_request_target' && (github.event.pull_request.draft == false || github.event.action == 'review_requested') }}
+      uses: actions-ecosystem/action-add-labels@v1
       with:
         labels: "S: Needs Review"
-    - uses: actions-ecosystem/action-remove-labels@v1
+    - if: ${{ github.event_name == 'pull_request_target' }}
+      uses: actions-ecosystem/action-remove-labels@v1
       with:
         labels: "S: Awaiting Changes"

@@ -28,7 +28,6 @@
   - SpeedLoaderMagnumPractice
   - MagazinePistolSubMachineGunPractice
   - WeaponFlareGunSecurity
-  - SecurityBola #Harmony Change: Adds Security Bolas
 
 # Shared between secfab and emagged autolathe
 - type: latheRecipePack
@@ -55,9 +54,6 @@
   - MagazineShotgunSlug
   - SpeedLoaderMagnum
   - SpeedLoaderMagnumEmpty
-  - StripperClip  # Harmony change - part of RSC PR
-  - EnergyCartridgePrintedHarmony # Harmony Change: Adds the lethal energy cartridge to the security recipe pack
-
 
 - type: latheRecipePack
   id: SecurityWeaponsStatic
@@ -79,7 +75,7 @@
   - PowerCageMedium
   - PowerCageSmall
   - TelescopicShield
-  - Binoculars # LateStation change: Part of lens research (former laser rifle)
+  - ClothingBackpackHarmpack
 
 - type: latheRecipePack
   id: SecurityBoards
@@ -128,8 +124,6 @@
   - MagazineShotgunIncendiary
   - SpeedLoaderMagnumIncendiary
   - SpeedLoaderMagnumUranium
-  - EnergyCartridgeUnstablePrintedHarmony # Harmony Change: Adds the unstable energy cartridge to the security recipe pack
-  - EnergyCartridgeXRayPrintedHarmony # Harmony Change: Adds the x-ray energy cartridge to the security recipe pack
 
 - type: latheRecipePack
   id: SecurityWeapons
@@ -139,8 +133,6 @@
   - WeaponLaserCannon
   - WeaponLaserCarbine
   - WeaponXrayCannon
-  - WeaponEnergyAutorifle # Latestation addition
-  - WeaponEnergyCarbineHarmony # Harmony Change: Adds the energy carbine to the security recipe pack
   - WeaponTemperatureGun
 
 - type: latheRecipePack

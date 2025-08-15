@@ -15,5 +15,12 @@
   <GuideEntityEmbed Entity="MobSlimePerson" Caption="Slime Person"/>
   <GuideEntityEmbed Entity="MobVox" Caption="Vox"/>
   </Box>
+  <Box>
+  <GuideEntityEmbed Entity="MobHarpyDummy" Caption="Harpy"/>
+  <GuideEntityEmbed Entity="MobVulpkaninDummy" Caption="Vulpkanin"/>
+  <GuideEntityEmbed Entity="MobAvali" Caption="Avali"/>
+  <GuideEntityEmbed Entity="MobFelinidDummy" Caption="Felinid"/>
+  </Box>
+
 
 </Document>

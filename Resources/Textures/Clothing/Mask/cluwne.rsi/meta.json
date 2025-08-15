@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Made by brainfood1183 (github) for ss14. Reptilian edit by Nairod(Github), vox edit by Flareguy | vulpkanin version taken from Paradise station at https://github.com/DeltaV-Station/Delta-v/pull/517/commits/80005d3112b50b94f821b59d87866b8318253ddf edited by Floofers",
+  "copyright": "Made by brainfood1183 (github) for ss14. Reptilian edit by Nairod(Github), vox edit by Flareguy",
   "size": {
     "x": 32,
     "y": 32
@@ -12,10 +12,6 @@
     },
     {
       "name": "equipped-MASK",
-      "directions": 4
-    },
-    {
-      "name": "equipped-MASK-vulpkanin",
       "directions": 4
     },
     {

@@ -6,12 +6,6 @@
     ClothingBackpackDuffelCargo: 3
     ClothingUniformJumpsuitCargo: 3
     ClothingUniformJumpskirtCargo: 3
-# start of harmony change: adds new cargo jumpsuits
-    ClothingUniformJumpsuitCargoPantsHarmony: 3
-    ClothingUniformJumpsuitCargoverallsHarmony: 3
-    ClothingUniformJumpsuitCargoOfficeSlacksHarmony: 3
-    ClothingUniformJumpskirtCargoOfficeSkirtHarmony: 3
-# end of harmony change
     ClothingShoesColorBlack: 3
     ClothingHandsGlovesFingerless: 3
     ClothingHeadHatCargosoft: 3
@@ -26,6 +20,3 @@
     ToyFigurineCargoTech: 1
     ToyFigurineSalvage: 1
     ToyFigurineQuartermaster: 1
-    ToyPlushieGarret: 1 ##Latestation
-    ToyPlushieLooks: 1 ##Latestation
-

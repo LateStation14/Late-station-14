@@ -64,7 +64,6 @@
   - type: StealTarget
     stealGroup: HeadCloak
 
-# Harmony Change: Updated the sprite pathing for the QM spriting update
 - type: entity
   parent: [ClothingNeckBase, BaseCommandContraband]
   id: ClothingNeckCloakQm
@@ -72,7 +71,7 @@
   description: A strong brown cloak with a reflective stripe, while not as fancy as others, it does show your managing skills.
   components:
   - type: Sprite
-    sprite: _Harmony/Clothing/Neck/Cloaks/qm.rsi
+    sprite: Clothing/Neck/Cloaks/qm.rsi
   - type: StealTarget
     stealGroup: HeadCloak
 
@@ -153,6 +152,9 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/goliathcloak.rsi
+  - type: Construction
+    graph: ClothingGoliathCloak
+    node: cloak
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodGoliathCloak
     requiredSlot:
@@ -161,11 +163,6 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
-  # Harmony Start
-  - type: Construction
-    graph: ClothingGoliathCloak
-    node: cloak
-  # Harmony End
 
 - type: entity
   parent: ClothingNeckBase

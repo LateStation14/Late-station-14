@@ -130,7 +130,7 @@
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
-        - SyndicateNamesElite
+        - NamesSyndicateElite
         nameFormat: name-format-nukie-commander
       - type: NpcFactionMember
         factions:
@@ -147,7 +147,7 @@
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
-        - SyndicateNamesNormal
+        - NamesSyndicateNormal
         nameFormat: name-format-nukie-agent
       - type: NpcFactionMember
         factions:
@@ -157,7 +157,7 @@
     - prefRoles: [ Nukeops ]
       fallbackRoles: [ NukeopsCommander, NukeopsMedic ]
       spawnerPrototype: SpawnPointNukeopsOperative
-      max: 2
+      max: 3
       playerRatio: 10
       startingGear: SyndicateOperativeGearFull
       roleLoadout:
@@ -166,7 +166,7 @@
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
-        - SyndicateNamesNormal
+        - NamesSyndicateNormal
         nameFormat: name-format-nukie-operator
       - type: NpcFactionMember
         factions:
@@ -185,7 +185,7 @@
   - type: AntagRandomObjectives
     sets:
     - groups: TraitorObjectiveGroups
-    maxDifficulty: 7.5 # Harmony. Change: 5 -> 7.5
+    maxDifficulty: 5
   - type: AntagSelection
     agentName: traitor-round-end-agent-name
 
@@ -224,6 +224,31 @@
     - prefRoles: [ Traitor ]
       mindRoles:
       - MindRoleTraitorReinforcement
+
+- type: entity
+  id: Changeling
+  parent: BaseGameRule
+  components:
+  - type: GameRule
+    minPlayers: 25
+  - type: AntagSelection
+    definitions:
+    - prefRoles: [ Changeling ]
+      max: 3
+      playerRatio: 15
+      briefing:
+        text: changeling-role-greeting
+        color: Red
+        sound: /Audio/Ambience/Antag/changeling_start.ogg
+      components:
+      - type: ChangelingDevour
+      - type: ChangelingIdentity
+      - type: ChangelingTransform
+      - type: ActionGrant
+        actions:
+        - ActionRetractableItemArmBlade # Temporary addition, will inevitably be a purchasable in the bio-store
+      mindRoles:
+      - MindRoleChangeling
 
 - type: entity
   id: Revolutionary
@@ -271,7 +296,7 @@
     - WizardSurviveObjective
     - WizardDemonstrateObjective
   - type: LoadMapRule
-    gridPath: /Maps/Shuttles/wizard.yml
+    mapPath: /Maps/Nonstations/wizardsden.yml
   - type: RuleGrids
   - type: AntagSelection
   - type: AntagLoadProfileRule
@@ -306,8 +331,9 @@
         - Wizard
       - type: RandomMetadata
         nameSegments:
-        - names_wizard_first
-        - names_wizard_last
+        - NamesWizardFirst
+        - NamesWizardLast
+        nameFormat: name-format-wizard
       mindRoles:
       - MindRoleWizard
 
