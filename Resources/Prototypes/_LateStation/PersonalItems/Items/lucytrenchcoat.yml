@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingOuterCoatTrench
+  id: PersonalItemLucyTrenchCoat
+  description: Lucy Price's trench coat. Can't work without it.
+
+- type: loadout
+  id: PersonalItemLucyTrenchCoat
+  storage:
+    back:
+      - PersonalItemLucyTrenchCoat
+  effects:
+  - !type:PersonalItemLoadoutEffect
+    character:
+    - Lucy Price
