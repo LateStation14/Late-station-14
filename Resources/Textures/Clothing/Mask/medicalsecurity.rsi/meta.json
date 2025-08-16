@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Sprited by LinkUyx#6557. Reptilian edit by Nairod(Github)  | vulpkanin version taken from DeltaV at https://github.com/DeltaV-Station/Delta-v/pull/517/commits/52404acabfd7292287cea6bc0c31401d4dee3957",
+  "copyright": "Sprited by LinkUyx#6557. Reptilian edit by Nairod(Github)",
   "size": {
     "x": 32,
     "y": 32
@@ -52,14 +52,6 @@
     },
     {
       "name": "inhand-right",
-      "directions": 4
-    },
-    {
-      "name": "equipped-MASK-vulpkanin",
-      "directions": 4
-    },
-    {
-      "name": "up-equipped-MASK-vulpkanin",
       "directions": 4
     },
     {

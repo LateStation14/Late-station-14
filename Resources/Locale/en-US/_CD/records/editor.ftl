@@ -1,4 +1,5 @@
 # Records editor
+humanoid-profile-editor-cd-allergies-tab = Allergies
 humanoid-profile-editor-cd-records-tab = Records
 
 # General
@@ -17,6 +18,9 @@ humanoid-profile-editor-cd-records-identifying-features = Identifying Features:
 humanoid-profile-editor-cd-records-allergies = Allergies:
 humanoid-profile-editor-cd-records-drug-allergies = Drug Allergies:
 humanoid-profile-editor-cd-records-postmortem = Postmortem Instructions:
+
+# Admin
+humanoid-profile-editor-cd-records-admin = Admin
 
 # Entries
 humanoid-profile-editor-cd-records-add-entry = Add Entry

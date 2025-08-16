@@ -29,8 +29,6 @@
   id: BasicAntagEventsTable
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
     children:
-    - !type:NestedSelector # DeltaV
-      tableId: BasicAntagEventsTableDeltaV
     - id: ClosetSkeleton
     - id: DragonSpawn
     - id: KingRatMigration
@@ -162,10 +160,10 @@
   id: DragonSpawn
   components:
   - type: StationEvent
-    weight: 3.5
+    weight: 6.5
     earliestStart: 40
-    reoccurrenceDelay: 40
-    minimumPlayers: 35
+    reoccurrenceDelay: 20
+    minimumPlayers: 20
     duration: null
   - type: SpaceSpawnRule
     spawnDistance: 0
@@ -191,11 +189,11 @@
   id: NinjaSpawn
   components:
   - type: StationEvent
-    weight: 3
+    weight: 6
     duration: null
     earliestStart: 30
-    reoccurrenceDelay: 40
-    minimumPlayers: 35
+    reoccurrenceDelay: 20
+    minimumPlayers: 30
   - type: SpaceSpawnRule
   - type: AntagLoadProfileRule
   - type: AntagObjectives
@@ -230,8 +228,9 @@
         - DeathAcidifierImplant
       - type: RandomMetadata
         nameSegments:
-        - names_ninja_title
-        - names_ninja
+        - NamesNinjaTitle
+        - NamesNinja
+        nameFormat: name-format-ninja
       mindRoles:
       - MindRoleNinja
 
@@ -316,8 +315,9 @@
         - Wizard
       - type: RandomMetadata
         nameSegments:
-        - names_wizard_first
-        - names_wizard_last
+        - NamesWizardFirst
+        - NamesWizardLast
+        nameFormat: name-format-wizard
       mindRoles:
       - MindRoleWizard
 
@@ -409,7 +409,7 @@
     earliestStart: 15
     minimumPlayers: 15
     weight: 5
-    duration: 50 # Delta V Change
+    duration: 60
   - type: VentClogRule
 
 - type: entity
@@ -421,15 +421,24 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 12
     weight: 5
-    duration: 30 # DeltaV: was 60, used as a delay now
+    duration: 60
   - type: VentCrittersRule
-    table: !type:GroupSelector # DeltaV: EntityTable instead of spawn entries
-      children:
-      - id: MobAdultSlimesBlueAngry
-      - id: MobAdultSlimesGreenAngry
-      - id: MobAdultSlimesYellowAngry
+    # LateStation per player spawn system
+    baselinePlayers: 12
+    playersPerSpawn: 3
+    baseSpawns: 0
+    minSpawns: 2
+    maxSpawns: 999
+    # End of additions
+    entries:
+    - id: MobAdultSlimesBlueAngry
+      prob: 0.02
+    - id: MobAdultSlimesGreenAngry
+      prob: 0.02
+    - id: MobAdultSlimesYellowAngry
+      prob: 0.02
 
 - type: entity
   id: SnakeSpawn
@@ -440,15 +449,24 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 12
     weight: 5
-    duration: 30 # DeltaV: was 60, used as a delay now
+    duration: 60
   - type: VentCrittersRule
-    table: !type:GroupSelector # DeltaV: EntityTable instead of spawn entries
-      children:
-      - id: MobPurpleSnake
-      - id: MobSmallPurpleSnake
-      - id: MobCobraSpace
+    # LateStation per player spawn system
+    baselinePlayers: 12
+    playersPerSpawn: 3
+    baseSpawns: 0
+    minSpawns: 2
+    maxSpawns: 999
+    # End of additions
+    entries:
+    - id: MobPurpleSnake
+      prob: 0.02
+    - id: MobSmallPurpleSnake
+      prob: 0.02
+    - id: MobCobraSpace
+      prob: 0.02
 
 - type: entity
   id: SpiderSpawn
@@ -459,12 +477,20 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 12
     weight: 5
-    duration: 30 # DeltaV: was 60, used as a delay now
+    duration: 60
   - type: VentCrittersRule
-    table: # DeltaV: EntityTable instead of spawn entries
-      id: MobGiantSpiderAngry
+    # LateStation per player spawn system
+    baselinePlayers: 12
+    playersPerSpawn: 3
+    baseSpawns: 0
+    minSpawns: 2
+    maxSpawns: 999
+    # End of additions
+    entries:
+    - id: MobGiantSpiderAngry
+      prob: 0.05
 
 - type: entity
   id: SpiderClownSpawn
@@ -475,12 +501,20 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 20
+    minimumPlayers: 12
     weight: 1.5
-    duration: 30 # DeltaV: was 60, used as a delay now
+    duration: 60
   - type: VentCrittersRule
-    table: # DeltaV: EntityTable instead of spawn entries
-      id: MobClownSpider
+    # LateStation per player spawn system
+    baselinePlayers: 12
+    playersPerSpawn: 3
+    baseSpawns: 0
+    minSpawns: 2
+    maxSpawns: 999
+    # End of additions
+    entries:
+    - id: MobClownSpider
+      prob: 0.05
 
 - type: entity
   id: ZombieOutbreak
@@ -542,8 +576,9 @@
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
-        - SyndicateNamesPrefix
-        - SyndicateNamesNormal
+        - NamesSyndicatePrefix
+        - NamesSyndicateNormal
+        nameFormat: name-format-nukie-generic
       - type: NpcFactionMember
         factions:
         - Syndicate

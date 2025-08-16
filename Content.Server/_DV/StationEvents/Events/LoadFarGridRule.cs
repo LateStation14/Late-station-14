@@ -1,5 +1,5 @@
 using Content.Server.GameTicking.Rules;
-using Content.Server.Station.Components;
+using Content.Shared.Station.Components;
 using Content.Server.StationEvents.Components;
 using Content.Shared.GameTicking.Components;
 using Robust.Server.GameObjects;

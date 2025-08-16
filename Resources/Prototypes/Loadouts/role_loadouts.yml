@@ -31,7 +31,7 @@
 # Silicons
 - type: roleLoadout
   id: JobBorg
-  nameDataset: names_borg
+  nameDataset: NamesBorg
   canCustomizeName: true
 
 - type: roleLoadout

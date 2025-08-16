@@ -66,6 +66,7 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] GameMaps =
         {
+            "Vanquish", // Latestation, Developed by Lachryphage
             "Dev",
             "TestTeg",
             "Fland",

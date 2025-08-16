@@ -9,7 +9,7 @@ public sealed class AxolotlCVars
         /// Respawn time, how long the player has to wait in seconds after death. Set this to zero to disable respawning.
         /// </summary>
         public static readonly CVarDef<float> RespawnTime =
-            CVarDef.Create("game.respawn_time", 300.0f, CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("game.respawn_time", 5.0f, CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         /// The number of players that must exist on the server for the respawn button to be disabled.

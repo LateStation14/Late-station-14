@@ -62,7 +62,6 @@
     state: fadingstars2
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: fadingstars3
-  shader: unshaded
 
 - type: marking
   id: DionaLivingNymph
@@ -94,7 +93,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
     state: dionamoonbloom
-  shader: unshaded
 
 - type: marking
   id: DionaBigFirefly
@@ -106,7 +104,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dionabigfirefly
-  shader: unshaded
 
 - type: marking
   id: DionaFirefly
@@ -118,7 +115,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dionafirefly
-  shader: unshaded
 
 - type: marking
   id: DionaPollenDust
@@ -141,7 +137,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
     state: dwarfbearcheeks
-  shader: unshaded
 
 - type: marking
   id: DwarfHeadGlow
@@ -153,7 +148,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfheadglow
-  shader: unshaded
 
 - type: marking
   id: DwarfConstellationHead
@@ -169,7 +163,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfconstellationhead
-  shader: unshaded
 
 - type: marking
   id: DwarfConstellationChest
@@ -185,7 +178,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfconstellationchest
-  shader: unshaded
 
 - type: marking
   id: DwarfConstellationLArm
@@ -201,7 +193,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfconstellationlarm
-  shader: unshaded
 
 - type: marking
   id: DwarfConstellationLHand
@@ -217,7 +208,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfconstellationlhand
-  shader: unshaded
 
 - type: marking
   id: DwarfConstellationRArm
@@ -233,7 +223,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfconstellationrarm
-  shader: unshaded
 
 - type: marking
   id: DwarfConstellationRHand
@@ -249,7 +238,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfconstellationrhand
-  shader: unshaded
 
 - type: marking
   id: DwarfConstellationLLeg
@@ -265,7 +253,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfconstellationlleg
-  shader: unshaded
 
 - type: marking
   id: DwarfConstellationLFoot
@@ -281,7 +268,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfconstellationlfoot
-  shader: unshaded
 
 - type: marking
   id: DwarfConstellationRLeg
@@ -297,7 +283,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfconstellationrleg
-  shader: unshaded
 
 - type: marking
   id: DwarfConstellationRFoot
@@ -313,7 +298,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfconstellationrfoot
-  shader: unshaded
 
 - type: marking
   id: DwarfChestHair
@@ -355,7 +339,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
     state: dwarftattooshootingstar
-  shader: unshaded
 
 - type: marking
   id: DwarfMarkBear
@@ -370,7 +353,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfmarkbear
-  shader: unshaded
 
 - type: marking
   id: DwarfMarkKangarooLHand
@@ -385,7 +367,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfmarkkangaroolhand
-  shader: unshaded
 
 - type: marking
   id: DwarfMarkKangarooRHand
@@ -400,7 +381,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfmarkkangaroo
-  shader: unshaded
 
 - type: marking
   id: DwarfMarkCobra
@@ -415,7 +395,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfmarkcobra
-  shader: unshaded
 
 - type: marking
   id: DwarfMarkSpider
@@ -430,7 +409,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: dwarfmarkspider
-  shader: unshaded
 
 - type: marking
   id: SpiderMirror
@@ -442,7 +420,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: spidermirror
-  shader: unshaded
 
 - type: marking
   id: SpiderGlowEyes
@@ -454,7 +431,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
     state: spidergloweyes
-  shader: unshaded
 
 - type: marking
   id: SpiderEyesMulti
@@ -543,7 +519,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: mothglowantenna
-  shader: unshaded
 
 - type: marking
   id: MothFireflyOverlay
@@ -555,7 +530,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: mothfirefly1
-  shader: unshaded
 
 - type: marking
   id: MothFirefly
@@ -893,7 +867,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
     state: voxtaillantern
-  shader: unshaded
 
 - type: marking
   id: VoxTailSingleStripe

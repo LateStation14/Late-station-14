@@ -169,7 +169,7 @@
   id: FlippoEngravedLighter
   name: steal-target-groups-flippo-engraved-lighter
   sprite:
-    sprite: Objects/Tools/lighters.rsi
+    sprite: Objects/Tools/Lighters/lighters.rsi
     state: zippo_engraved_icon_base
 
 - type: stealTargetGroup
@@ -276,13 +276,6 @@
   sprite:
     sprite: Objects/Devices/cartridge.rsi
     state: cart-sec
-
-- type: stealTargetGroup
-  id: ClothingNeckShockCollar
-  name: steal-target-groups-shock-collar
-  sprite:
-    sprite: Clothing/Neck/Misc/shock_collar.rsi
-    state: icon
 
 #Thief structures
 

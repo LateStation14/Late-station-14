@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by Discord user EVIN [EVIN] and added as an item by FBI",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "equipped-OUTERCLOTHING",
+            "directions": 4
+        },
+        {
+            "name": "equipped-OUTERCLOTHING-vox",
+            "directions": 4
+        },
+        {
+            "name": "equipped-OUTERCLOTHING-dog",
+            "directions": 4
+        }
+
+    ]
+}

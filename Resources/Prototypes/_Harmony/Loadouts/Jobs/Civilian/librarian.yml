@@ -10,17 +10,11 @@
 # Coat
 - type: loadout
   id: CuratorCoatHarmony
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorLibrarian
   equipment:
     outerClothing: ClothingOuterCuratorCoat
 
 # Mantle
 - type: loadout
   id: CuratorMantleHarmony
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorLibrarian
   equipment:
     neck: ClothingNeckMantleCurator

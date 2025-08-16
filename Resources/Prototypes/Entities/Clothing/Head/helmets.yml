@@ -35,9 +35,9 @@
   description: Standard security gear. Protects the head from impacts.
   components:
   - type: Sprite
-    sprite: _Harmony/Clothing/Head/Helmets/security.rsi #Harmony Change: Harmony Exclusive Resprite
+    sprite: Clothing/Head/Helmets/security.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/Head/Helmets/security.rsi #Harmony Change: Harmony Exclusive Resprite
+    sprite: Clothing/Head/Helmets/security.rsi
   - type: Tag
     tags:
     - WhitelistChameleon
@@ -568,3 +568,25 @@
     itemIconStyle: BigItem
   - type: InstantAction
     event: !type:ToggleActionEvent
+
+#card helmet
+- type: entity
+  parent: ClothingHeadHelmetBase
+  id: CardHelmet
+  name: cardboard helmet
+  description: A medieval helmet built from cardboard.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Helmets/card_helmet.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Helmets/card_helmet.rsi
+  - type: IngestionBlocker
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+  - type: StaminaResistance
+    damageCoefficient: 0.95
+  - type: Construction
+    graph: cardHelmet
+    node: cardhelmet

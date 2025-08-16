@@ -26,9 +26,6 @@
 
 - type: loadout
   id: SeniorTechnicianBeretHarmony
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorTechnician
   equipment:
     head: ClothingHeadHatBeretSeniorTechnicianHarmony
 
@@ -45,9 +42,6 @@
 
 - type: loadout
   id: SeniorTechnicianJumpsuitHarmony
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorTechnician
   equipment:
     jumpsuit: ClothingUniformJumpsuitSeniorTechnicianHarmony
 
@@ -64,8 +58,5 @@
 
 - type: loadout
   id: SeniorTechnicianJumpskirtHarmony
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorTechnician
   equipment:
     jumpsuit: ClothingUniformJumpskirtSeniorTechnicianHarmony

@@ -27,7 +27,7 @@ research-technology-draconic-munitions = Draconic Munitions
 research-technology-uranium-munitions = Uranium Munitions
 research-technology-explosive-technology = Explosive Technology
 research-technology-special-means = Special Means
-research-technology-weaponized-laser-manipulation = Lens Tech
+research-technology-weaponized-laser-manipulation = Weaponized Laser Manipulation
 research-technology-nonlethal-ammunition = Nonlethal Ammunition
 research-technology-practice-ammunition = Practice Ammunition
 research-technology-concentrated-laser-weaponry = Concentrated Laser Weaponry
@@ -39,6 +39,7 @@ research-technology-kinetic-modifications = Kinetic Modifications
 research-technology-basic-shuttle-armament = Shuttle Basic Armament
 research-technology-advanced-shuttle-weapon = Advanced Shuttle Weapons
 research-technology-thermal-weaponry = Thermal Weaponry
+research-technology-dual-wielding-technology = Dual Wielding Technology
 
 research-technology-basic-robotics = Basic Robotics
 research-technology-basic-anomalous-research = Basic Anomalous Research

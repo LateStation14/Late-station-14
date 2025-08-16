@@ -1,24 +1,15 @@
-using Content.Server.Antag;
-using Content.Server.GameTicking.Rules.Components;
-using Content.Server.Pinpointer;
 using Content.Server.StationEvents.Components;
-using Content.Shared.EntityTable;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Station.Components;
 using Content.Shared.Storage;
 using Robust.Shared.Map;
-using Robust.Shared.Player;
 using Robust.Shared.Random;
+// LateStation edit: scale critter spawns by player count, add player manager
+using System; // LateStation edit
+using Robust.Server.Player; // LateStation edit
 
 namespace Content.Server.StationEvents.Events;
 
-/// <summary>
-/// DeltaV: Reworked vent critters to spawn a number of mobs at a single telegraphed location.
-/// This gives players time to run away and let sec do their job.
-/// </summary>
-/// <remarks>
-/// This entire file is rewritten, ignore upstream changes.
-/// </remarks>
 public sealed class VentCrittersRule : StationEventSystem<VentCrittersRuleComponent>
 {
     /*
@@ -26,77 +17,97 @@ public sealed class VentCrittersRule : StationEventSystem<VentCrittersRuleCompon
      * USE THE PROTOTYPE.
      */
 
-    [Dependency] private readonly AntagSelectionSystem _antag = default!;
-    [Dependency] private readonly EntityTableSystem _entityTable = default!;
-    [Dependency] private readonly ISharedPlayerManager _player = default!;
-    [Dependency] private readonly NavMapSystem _navMap = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    // LateStation edit: player manager for player-count-based scaling
+    [Dependency] private readonly IPlayerManager _playerManager = default!; // LateStation edit
 
-    private List<EntityCoordinates> _locations = new();
-
-    protected override void Added(EntityUid uid, VentCrittersRuleComponent comp, GameRuleComponent gameRule, GameRuleAddedEvent args)
+    protected override void Started(EntityUid uid, VentCrittersRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
-        PickLocation(comp);
-        if (comp.Location is not {} coords)
-        {
-            ForceEndSelf(uid, gameRule);
-            return;
-        }
+        base.Started(uid, component, gameRule, args);
 
-        var mapCoords = _transform.ToMapCoordinates(coords);
-        if (!_navMap.TryGetNearestBeacon(mapCoords, out var beacon, out _))
-            return;
-
-        var nearest = beacon?.Comp?.Text!;
-        Comp<StationEventComponent>(uid).StartAnnouncement = Loc.GetString("station-event-vent-creatures-start-announcement-deltav", ("location", nearest));
-
-        base.Added(uid, comp, gameRule, args);
-    }
-
-    protected override void Ended(EntityUid uid, VentCrittersRuleComponent comp, GameRuleComponent gameRule, GameRuleEndedEvent args)
-    {
-        base.Ended(uid, comp, gameRule, args);
-
-        if (comp.Location is not {} coords)
-            return;
-
-        var players = _antag.GetTotalPlayerCount(_player.Sessions);
-        var min = comp.Min * players / comp.PlayerRatio;
-        var max = comp.Max * players / comp.PlayerRatio;
-        var count = Math.Max(RobustRandom.Next(min, max), 1);
-        Log.Info($"Spawning {count} critters for {ToPrettyString(uid):rule}");
-        for (int i = 0; i < count; i++)
-        {
-            foreach (var spawn in _entityTable.GetSpawns(comp.Table))
-            {
-                Spawn(spawn, coords);
-            }
-        }
-
-        if (comp.SpecialEntries.Count == 0)
-            return;
-
-        // guaranteed spawn
-        var specialEntry = RobustRandom.Pick(comp.SpecialEntries);
-        Spawn(specialEntry.PrototypeId, coords);
-    }
-
-    private void PickLocation(VentCrittersRuleComponent comp)
-    {
         if (!TryGetRandomStation(out var station))
+        {
             return;
+        }
 
         var locations = EntityQueryEnumerator<VentCritterSpawnLocationComponent, TransformComponent>();
-        _locations.Clear();
-        while (locations.MoveNext(out var uid, out _, out var transform))
+        var validLocations = new List<EntityCoordinates>();
+        while (locations.MoveNext(out _, out _, out var transform))
         {
             if (CompOrNull<StationMemberComponent>(transform.GridUid)?.Station == station)
             {
-                _locations.Add(transform.Coordinates);
+                validLocations.Add(transform.Coordinates);
+
+                // LateStation edit: original vent-based spawning disabled
+                /*
+                foreach (var spawn in EntitySpawnCollection.GetSpawns(component.Entries, RobustRandom))
+                {
+                    Spawn(spawn, transform.Coordinates);
+                }
+                */
             }
         }
 
-        if (_locations.Count > 0)
-            comp.Location = RobustRandom.Pick(_locations);
+        if (validLocations.Count == 0)
+        {
+            return;
+        }
+
+        // LateStation edit: Spawn attempts = baseline + step formula independent of vents
+        var playerCount = _playerManager.PlayerCount; // LateStation edit
+        var totalAttempts = component.MinSpawns; // LateStation edit
+        if (component.PlayersPerSpawn > 0) // LateStation edit
+        {
+            var effective = Math.Max(0, playerCount - component.BaselinePlayers); // LateStation edit
+            var fromPlayers = effective / component.PlayersPerSpawn; // LateStation edit
+            totalAttempts = component.BaseSpawns + fromPlayers; // LateStation edit
+        }
+        totalAttempts = Math.Clamp(totalAttempts, component.MinSpawns, component.MaxSpawns); // LateStation edit
+
+        // LateStation edit: perform N spawn attempts at random valid vents
+        for (var i = 0; i < totalAttempts; i++)
+        {
+            var coords = RobustRandom.Pick(validLocations);
+            var spawnedAny = false;
+            var spawns = EntitySpawnCollection.GetSpawns(component.Entries, RobustRandom);
+            foreach (var spawn in spawns)
+            {
+                Spawn(spawn, coords);
+                spawnedAny = true;
+            }
+
+            // LateStation edit: ensure at least 1 critter per attempt if probabilities yield none
+            if (!spawnedAny && component.Entries.Count > 0)
+            {
+                // pick any valid entry
+                foreach (var entry in component.Entries)
+                {
+                    if (entry.PrototypeId != null)
+                    {
+                        Spawn(entry.PrototypeId, coords);
+                        break;
+                    }
+                }
+            }
+        }
+
+        // guaranteed spawn (specialEntries): keep a single guaranteed special spawn if defined
+        if (component.SpecialEntries.Count > 0)
+        {
+            var specialEntry = RobustRandom.Pick(component.SpecialEntries);
+            var specialSpawn = RobustRandom.Pick(validLocations);
+            Spawn(specialEntry.PrototypeId, specialSpawn);
+        }
+
+        // LateStation edit: original special per-vent spawning disabled
+        /*
+        foreach (var location in validLocations)
+        {
+            foreach (var spawn in EntitySpawnCollection.GetSpawns(component.SpecialEntries, RobustRandom))
+            {
+                Spawn(spawn, location);
+            }
+        }
+        */
+        // End of LateStation edits
     }
 }

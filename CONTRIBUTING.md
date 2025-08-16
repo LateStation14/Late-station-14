@@ -1,6 +1,6 @@
 # LateStation Contributing Guidelines
 
-LateStation is a custom-content fork of Space Station 14 (https://github.com/space-wizards/space-station-14), built to extend and reshape the game with our own mechanics, assets, and content. (all in due time)
+LateStation is a custom-content fork of [Space Station 14](https://github.com/space-wizards/space-station-14), built to extend and reshape the game with our own mechanics, assets, and content (all in due time).
 
 We follow upstream's PR guidelines:
 https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html
@@ -11,7 +11,7 @@ https://docs.spacestation14.com/en/general-development/codebase-info/pull-reques
 All contributors are expected to have a working development environment:
 https://docs.spacestation14.com/en/general-development/setup/setting-up-a-development-environment.html
 
-By submitting a PR, you agree that your code contributions are licensed under the **MIT License**, in line with LateStation’s licensing.
+By submitting a PR, you agree that your code contributions are licensed under the **MIT License** and **AGPL-3.0-or-later**, in line with LateStation’s dual-licensing model for original content.
 
 ---
 
@@ -31,7 +31,7 @@ By submitting a PR, you agree that your code contributions are licensed under th
 
 ## LateStation-specific Content
 
-When adding new content, create it under `_LateStation` folders whenever possible. This avoids conflicts with upstream and keeps our changes cleanly separated.
+When adding new content, create it under `_LateStation` folders whenever possible. This keeps our content cleanly separated from upstream code and simplifies merges.
 
 Examples:
 - Content.Server/_LateStation/Speech/EntitySystems/IlleismAccentSystem.cs
@@ -43,107 +43,110 @@ Examples:
 
 ## Changes to Upstream Files
 
-If you need to modify upstream files (C#, YAML, etc.), you must comment your changes to help future merges and reduce conflict risk.
+If you need to modify upstream files (C#, YAML, etc.), you **must comment your changes**. This helps with resolving future merge conflicts and makes your intent clear.
 
-- Always comment on or near the lines you change
-- Do not delete upstream code — comment it out instead
-- For large additions to upstream files, consider using a partial class if applicable
-- .ftl (fluent) files do not support inline comments — edit carefully
+- Always comment near the lines you change
+- Do **not** delete upstream code — comment it out
+- For large additions, use partial classes when appropriate
+- Fluent (`.ftl`) files don’t support inline comments — edit with care
 
 ### Commenting Example
 
-YAML - Inline field comment:
+**YAML – Inline field comment:**
   hidden: false # LateStation change for various Vox masks
 
-YAML - Begin/End block comment:
+**YAML – Block comment:**
   # Begin LateStation Personal trinkets
   - ItemJamesCane
   - ItemAnnabellePlushie
   - ItemPititiRockGorb
   # End LateStation Personal trinkets
 
-C# - Inline logic comment:
+**C# – Inline logic comment:**
   if (!_actionBlocker.CanSpeak(source, true) && !ignoreActionBlocker) // LateStation: support hypophonia trait
 
-C# - Enclosing block comment:
-  // LateStation - start of additional statuses
+**C# – Enclosing block:**
+  // LateStation - start of additional statuses into the criminal records computer system from CD
   SecurityStatus.Monitor => "SecurityIconMonitor",
   SecurityStatus.Search => "SecurityIconSearch",
-  // LateStation - end of additional statuses
+  // LateStation - end of additional statuses into the criminal records computer system from CD
 
 ---
 
 ## Porting (Importing from Other Forks)
 
-When porting features, assets, or code from other SS14 forks (such as Delta-V, Frontier, Harmony, etc.), you must:
+When porting content (code, YAML, assets) from other SS14 forks (e.g., Delta-V, Harmony, Frontier, etc.):
 
-- Place the content into a clearly named subfolder with an underscore prefix.
-- This keeps LateStation's structure clean and avoids mixing upstream, original, and imported content.
+- Use a clearly named subfolder with a `_` prefix (e.g., `_DV`, `_NF`, `_Harmony`)
+- Avoid mixing ported code into `_LateStation` or upstream folders
+- Use a short, recognizable name for the fork — e.g.:
+  - `_DV/` from Delta-V
+  - `_NF/` from Frontier
 
-Example:
-- Resources/Prototypes/_Example/
-- Content.Server/_Example/Systems/MyPortedSystem.cs
+  **this all to ensure that if we have to pull anything we can do it easily by nuking the folder**
 
-Use a short, recognizable fork name or abbreviation as the folder name. For example: _DV, _NF, _Harmony, _AXOLOTL.
+**License Requirements:**
 
-Licensing Requirements:
-- You must verify that the original source uses the MIT License.
-- Do not import code or assets with incompatible licenses (e.g., AGPL, proprietary, or commercial-restricted).
-- If you're unsure about the license or how to format the port, ask in Discord.
+- You must verify that the source project uses the **MIT license**, or is clearly dual-licensed
+- You may import AGPL-licensed code, but you **must clearly label it** it in its own folder.
+  - Use a descriptive folder name (e.g., `DeltaV/`)
+  - Include an SPDX license header at the top of each file: `SPDX-License-Identifier: AGPL-3.0-or-later`
+  - Any server deployment using AGPL code must comply with the AGPL terms (e.g., source disclosure).
+- If you’re unsure, **ask in Discord** before submitting
 
 ---
 
 ## Mapping
 
 - Follow upstream mapping guidelines: https://docs.spacestation14.com/en/space-station-14/mapping.html
-- Maps must be tested in a development environment
-- Ensure power, atmos, gravity, and lighting all work before submission
-- LateStation maps (e.g., salvage, shuttles) should support immersive MRP
-- Submit upstream map changes directly to upstream when possible
+- Test maps thoroughly — power, atmos, gravity, lighting must work
+- LateStation-exclusive maps (e.g., shuttles, wrecks) should support immersive MRP
+- Submit upstream map changes to upstream when possible
 
 ---
 
 ## Art and Spriting
 
-- Test all sprites in-game
-- Provide in-game screenshots in your PR
-- We do not enforce a strict palette — good art is good art
+- Test sprites in-game (not just in the editor)
+- Include in-game screenshots with your PR
+- Palette flexibility is allowed — consistency is good, but creativity is welcome
 
 ---
 
 ## Before You Submit
 
-- Double-check your diff for:
-  - Accidental changes
-  - Whitespace or line-ending junk
-- Make sure you're targeting:
-  - Repo: LateStation14/Late-station-14
-  - Branch: master
+Before opening a PR:
 
-To fix accidental RobustToolbox changes:
+- Double-check your diff:
+  - Look for unintended changes
+  - Avoid whitespace-only or newline-only diffs
+- Confirm your target is correct:
+  - **Repository:** `LateStation14/Late-station-14`
+  - **Branch:** `master`
+
+To undo accidental changes to `RobustToolbox`:
   git checkout upstream/master RobustToolbox
 
-(Replace "upstream" with your remote for space-wizards/space-station-14.)
+(Replace `upstream` with the name of your `space-wizards` remote.)
 
 ---
 
 ## Changelogs
 
-Use the :cl: tag in your PR body to list player-facing changes.
+Use the `:cl:` tag in your PR body to describe player-facing changes.
 
-Valid types: add, remove, tweak, fix
+**Valid types:** `add`, `remove`, `tweak`, `fix`
 
-Example:
+**Example:**
 :cl:
 - add: Added a new gun to the armory.
 - fix: Fixed crew manifest showing dead people.
 
-Only entries after :cl: are read by Weh Bot.
-LateStation does not maintain a separate Admin changelog.
+Only entries **after** `:cl:` are read by Weh Bot.
+LateStation does **not** maintain a separate Admin changelog.
 
 ---
 
 ## Additional Resources
 
-- SS14 Docs: https://docs.spacestation14.io/
-- Join #latestation-contributors on Discord for help or questions
+- 🧱 SS14 Developer Docs: https://docs.spacestation14.io/

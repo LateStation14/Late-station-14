@@ -5,10 +5,12 @@ on:
 
 jobs:
   labeler:
-    if: github.actor != 'Weh-Bot'
+    if: ${{ github.actor != 'Weh-Bot' && github.actor != 'dependabot[bot]' }}
     permissions:
       contents: read
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
     - uses: actions/labeler@v5
+      with:
+        sync-labels: true

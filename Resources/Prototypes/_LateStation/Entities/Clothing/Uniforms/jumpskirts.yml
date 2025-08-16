@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # LateStation Change, make it so that ClothingUniformSkirtBase is used for Harpies
   id: ClothingUniformJumpskirtWhiteWeddingDress
   name: white wedding dress
   description: An elegant dress, for that special day.
@@ -10,7 +10,7 @@
     sprite: _LateStation/Clothing/Uniforms/Jumpskirt/white_wedding_dress.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # LateStation Change, make it so that ClothingUniformSkirtBase is used for Harpies
   id: ClothingUniformJumpskirtFloralWeddingDress
   name: floral wedding dress
   description: A floral dress, for that special day.

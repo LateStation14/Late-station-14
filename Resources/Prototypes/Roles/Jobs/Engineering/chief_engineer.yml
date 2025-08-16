@@ -6,15 +6,13 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobAtmosphericTechnician
-      time: 0 #0 hrs
+      time: 9000 #2.5 hrs
     - !type:RoleTimeRequirement
       role: JobStationEngineer
-      time: 0 #0hrs
+      time: 18000 #5 hrs
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 28800 #8 hrs
-    - !type:OverallPlaytimeRequirement
-      time: 43200 #12 hrs
+      time: 36000 #10 hrs
   weight: 10
   startingGear: ChiefEngineerGear
   icon: "JobIconChiefEngineer"

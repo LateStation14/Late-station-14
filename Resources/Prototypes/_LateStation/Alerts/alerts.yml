@@ -1,0 +1,14 @@
+# LateStation, replacement for the CD toggleinteraction
+# Admin ghost: toggle interaction ability via alert
+- type: alert
+  id: ToggleInteraction
+  clickEvent: !type:ToggleInteractionEvent
+  icons:
+  - sprite: /Textures/Clothing/Hands/Gloves/tacticalmaidgloves.rsi
+    state: icon
+  - sprite: /Textures/Interface/Alerts/pacified.rsi
+    state: icon
+  name: alerts-toggle-interaction-name
+  description: alerts-toggle-interaction-desc
+  minSeverity: 0
+  maxSeverity: 1

@@ -1,0 +1,184 @@
+# Humanoid polymorphs - LateStation
+# note: triagoth suggested this insanity and this fucking sucks - CobaltBox
+# GOOD ENOUGH - Triagoth
+- type: polymorph
+  id: HumanPoly
+  configuration:
+    entity: MobHuman
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: MothPoly
+  configuration:
+    entity: MobMoth
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: VoxPoly
+  configuration:
+    entity: MobVox
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: DionaPoly
+  configuration:
+    entity: MobDiona
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: SlimePoly
+  configuration:
+    entity: MobSlimePerson
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: ArachnidPoly
+  configuration:
+    entity: MobArachnid
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: DwarfPoly
+  configuration:
+    entity: MobDwarf
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: VulpkaninPoly
+  configuration:
+    entity: MobVulpkanin
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: AvaliPoly
+  configuration:
+    entity: MobAvali
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: FelinidPoly
+  configuration:
+    entity: MobFelinid
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: HarpyPoly
+  configuration:
+    entity: MobHarpy
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: ReptilianPoly
+  configuration:
+    entity: MobReptilian
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: ScurretPoly
+  configuration:
+    entity: MobScurret
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true
+
+- type: polymorph
+  id: KoboldPoly
+  configuration:
+    entity: MobKobold
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: true
+    transferDamage: true

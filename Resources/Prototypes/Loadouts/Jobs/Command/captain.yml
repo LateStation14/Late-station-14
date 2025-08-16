@@ -6,7 +6,7 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobCaptain
-      time: 10800 #20 hrs
+      time: 72000 #20 hrs
 
 # Jumpsuit
 - type: loadout
@@ -29,12 +29,6 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtCapFormalDress
 
-
-- type: loadout # Harmony
-  id: CaptainHawaiianHarmony
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitCaptainHawaiianHarmony
-
 # Head
 - type: loadout
   id: CaptainHead
@@ -45,11 +39,6 @@
   id: CaptainCap
   equipment:
     head: ClothingHeadHatCapcap
-
-- type: loadout # Harmony
-  id: BeretCaptainHarmony
-  equipment:
-    head: ClothingHeadHatBeretCaptainHarmony
 
 # Neck
 - type: loadout
@@ -66,9 +55,6 @@
   id: CaptainMantle
   equipment:
     neck: ClothingNeckMantleCap
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterCap
 
 - type: startingGear
   id: CaptainMantle

@@ -15,6 +15,8 @@
       Steel: 300
   - type: FitsInDispenser
     solution: drink
+  - type: ExaminableSolution
+    examinableWhileClosed: false
 
 - type: entity
   id: DrinkFlaskVisualsOpenable
@@ -76,15 +78,14 @@
   - type: Sprite
     sprite: Objects/Consumable/Drinks/detflask.rsi
 
-#Harmony Change: Updated Sprite Pathing, Name, and Contraband level for security resprite update
 - type: entity
   parent: [FlaskBase, DrinkFlaskVisualsOpenable]
   id: DrinkHosFlask
-  name: head of security's flask
+  name: hos's flask
   description: A metal flask, fit for a hard working HoS.
   components:
   - type: Sprite
-    sprite: _Harmony/Objects/Consumable/Drinks/hosflask.rsi
+    sprite: Objects/Consumable/Drinks/hosflask.rsi
 
 - type: entity
   parent: [FlaskBase, DrinkFlaskVisualsOpenable]

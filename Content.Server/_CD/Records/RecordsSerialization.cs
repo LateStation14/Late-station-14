@@ -73,7 +73,8 @@ public static class RecordsSerialization
             postmortemInstructions: DeserializeString(e, nameof(def.PostmortemInstructions), def.PostmortemInstructions),
             medicalEntries: DeserializeEntries(entries, CDModel.DbRecordEntryType.Medical),
             securityEntries: DeserializeEntries(entries, CDModel.DbRecordEntryType.Security),
-            employmentEntries: DeserializeEntries(entries, CDModel.DbRecordEntryType.Employment));
+            employmentEntries: DeserializeEntries(entries, CDModel.DbRecordEntryType.Employment),
+            adminEntries: DeserializeEntries(entries, CDModel.DbRecordEntryType.Admin));
     }
 
     private static CDModel.CharacterRecordEntry ConvertEntry(PlayerProvidedCharacterRecords.RecordEntry entry, CDModel.DbRecordEntryType type)

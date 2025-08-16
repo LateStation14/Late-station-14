@@ -15,7 +15,6 @@
     - id: SurvivalKnife
     - id: HandheldGPSBasic
     - id: RadioHandheld
-    - id: SeismicCharge # Harmony change
     - id: AppraisalTool
     - id: FireExtinguisher
     - id: Flare

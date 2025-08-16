@@ -60,20 +60,27 @@ https://docs.spacestation14.com/en/general-development/setup.html
 
 ## ⚖️ License
 
-### 📜 Code
+### Code
 
-All code in this repository is licensed under the MIT License, including any code forked from Wizards Den's Space Station 14 (https://github.com/space-wizards/space-station-14). This includes all of LateStation’s engine, content, and custom systems.
+- All original code created by the LateStation team (typically in `_LateStation/` folders) is **dual-licensed under MIT and AGPL-3.0-or-later** (as of this commit everything before this commit is still MIT)
+- Upstream code from [Wizards Den's Space Station 14](https://github.com/space-wizards/space-station-14) remains under the original **MIT License** and is preserved unmodified unless there have to be changes in order to make certain things work, but then its commented.
+- Contributors must follow licensing rules defined in our [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Some content in this repository also originates from other SS14 forks, including:
-- `_AXOLOTL/` — from [Axolotl](https://github.com/Axolotl-MRP/axolotl-mrp-14)
-- `_CD/` — from [Cosmatic Drift](https://github.com/cosmatic-drift-14/cosmatic-drift)
-- `_DV/` — from [Delta-V](https://github.com/DeltaV-Station/Delta-v)
-- `_Harmony/` — from [Harmony](https://github.com/ss14-harmony/ss14-harmony)
-- `_NF/` — from [Frontier](https://github.com/new-frontiers-14/frontier-station-14)
+### Ported Code
 
-These contributions are likewise licensed under the MIT License, and may be modified to fit LateStation’s design and gameplay direction.
+This repository contains content ported from other SS14 forks. These are stored in namespaced folders like:
 
-See LICENSE.txt for full license details.
+- `_AXOLOTL/` — [Axolotl MRP](https://github.com/Axolotl-MRP/axolotl-mrp-14)
+- `_CD/` — [Cosmatic Drift](https://github.com/cosmatic-drift-14/cosmatic-drift)
+- `_DV/` — [Delta-V](https://github.com/DeltaV-Station/Delta-v)
+- `_Harmony/` — [Harmony](https://github.com/ss14-harmony/ss14-harmony)
+- `_NF/` — [Frontier](https://github.com/new-frontiers-14/frontier-station-14)
+
+Only code that is **MIT-licensed or dual-licensed** is ported into LateStation. All code is used in compliance with its original license, and attribution is preserved where applicable.
+
+⚠️ **Note**: Some code files do not yet include SPDX license headers. We are currently in the process of adding them to all original LateStation content.
+
+Code ported or modified from upstream (Wizards Den) or other SS14 forks retains its original license (typically MIT OR AGPL) and is marked or attributed where appropriate. Licensing is preserved even when changes are made.
 
 ### 🖼️ Assets
 
@@ -88,4 +95,3 @@ See LICENSE.txt for full license details.
 https://creativecommons.org/licenses/by-nc-sa/3.0/
 
 These assets **cannot be used in commercial projects**. If you intend to use this project commercially, you will need to review and replace these assets.
-

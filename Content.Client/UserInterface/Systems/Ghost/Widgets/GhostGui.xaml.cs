@@ -115,9 +115,7 @@ public sealed partial class GhostGui : UIWidget
             return;
         }
 
-        var timeSinceDeath = _gameTiming.CurTime.Subtract(_axolotlTimeOfDeath.Value);
-        var delta = _axolotlMinTimeToRespawn - timeSinceDeath.TotalSeconds;
-
+        var delta = (_axolotlMinTimeToRespawn - _gameTiming.CurTime.Subtract(_axolotlTimeOfDeath.Value).TotalSeconds);
         if (delta <= 0)
         {
             AxolotlGhostRespawnButton.Text = Loc.GetString("ghost-gui-respawn-button-allowed");
