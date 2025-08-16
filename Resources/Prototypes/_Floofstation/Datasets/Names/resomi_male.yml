@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2025 mogaiskii <sani.mog@gmail.com>
-#
-# SPDX-License-Identifier: MIT
-
 - type: dataset
   id: names_resomi_male
   values:

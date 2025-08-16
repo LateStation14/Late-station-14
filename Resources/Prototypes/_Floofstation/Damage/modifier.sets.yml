@@ -1,6 +1,2 @@
-# SPDX-FileCopyrightText: 2025 mogaiskii <sani.mog@gmail.com>
-#
-# SPDX-License-Identifier: MIT
-
 - type: damageModifierSet
   id: Resomi
