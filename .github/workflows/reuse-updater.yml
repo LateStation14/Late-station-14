@@ -4,8 +4,10 @@
 
 name: Update REUSE Headers
 
-# Align behavior with changelog workflow
-concurrency: commit_action
+# Align behavior with changelog workflow and avoid duplicate runs
+concurrency:
+  group: reuse-update-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 
 on:
   pull_request_target:
@@ -21,6 +23,8 @@ env:
 
 jobs:
   update_headers:
+    # Skip runs triggered by our bot to avoid self-trigger loops on synchronize
+    if: github.actor != 'weh-bot' && github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     permissions:
       contents: write
