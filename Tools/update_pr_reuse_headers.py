@@ -130,11 +130,6 @@ def _contains_token(text: str | None) -> bool:
     t = str(text)
     return any(tok in t for tok in TOKENS)
 
-def is_token(text: str) -> bool:
-    # Treat any occurrence of token-like prefixes or monolith user as a bot/token
-    t = text or ""
-    return _contains_token(t) or t.lower().startswith("monolith")
-
 def is_bot_name(name: str | None) -> bool:
     if not name:
         return False
@@ -506,7 +501,7 @@ def create_header(authors, license_id, comment_style, last_author: str | None = 
         ordered = []
         if authors:
             for author, (_, year) in sorted(authors.items(), key=lambda x: (x[1][1], x[0])):
-                if author and not is_token(author) and not author.lower().startswith("unknown"):
+                if author and not _contains_token(author) and not author.lower().startswith("unknown"):
                     ordered.append((author, year))
         # Move last_author to the end if present
         if last_author:
@@ -536,7 +531,7 @@ def create_header(authors, license_id, comment_style, last_author: str | None = 
         ordered = []
         if authors:
             for author, (_, year) in sorted(authors.items(), key=lambda x: (x[1][1], x[0])):
-                if author and not is_token(author) and not author.lower().startswith("unknown"):
+                if author and not _contains_token(author) and not author.lower().startswith("unknown"):
                     ordered.append((author, year))
         if last_author:
             ordered = [(a, y) for (a, y) in ordered if a != last_author]
@@ -650,11 +645,17 @@ def process_file(file_path, default_license_id, pr_base_sha=None, pr_head_sha=No
 
         # Optionally override existing license with the provided default_license_id
         force_license = os.environ.get("REUSE_FORCE_LICENSE", "").lower() in ("1", "true", "yes")
+        # Also force if the rule-derived/default license differs from the existing header
+        try:
+            if (existing_license or '').strip() != (default_license_id or '').strip():
+                force_license = True
+        except Exception:
+            pass
 
-    # Combine existing and git authors
+        # Combine existing and git authors
         combined_authors = existing_authors.copy()
         for author, (git_min, git_max) in git_authors.items():
-            has_token = is_token(author)
+            has_token = _contains_token(author)
             if author.lower().startswith("unknown") or has_token:
                 continue
             if author in combined_authors:

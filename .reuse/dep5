@@ -144,20 +144,34 @@ Copyright: Contributors of the _EinsteinEngines upstream project
  2020-2025 EinsteinEngines contributors
 License: AGPL-3.0-or-later
 
+# Funkystation code licensed under AGPL-3.0-or-later
+Files: Content.Server/_Funkystation/**
+        Content.Client/_Funkystation/**
+        Content.Shared/_Funkystation/**
+        Resources/_Funkystation/**
+        Resources/Prototypes/_Funkystation/**
+Copyright: Contributors of the _Funkystation upstream project
+ 2020-2025 LateStation14 contributors (modifications)
+ 2020-2025 Funkystation contributors
+License: AGPL-3.0-or-later
+
 # Assets
 Files: Resources/Textures/**
-Copyright: 2020-2025 LateStation14 contributors
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
 License: CC-BY-SA-3.0
 
 # Localizations
 Files: Resources/Locale/**
-Copyright: 2020-2025 LateStation14 contributors
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
 License: MIT
 
 # Prototypes and server info (MIT)
 Files: Resources/Prototypes/**
         Resources/ServerInfo/**
-Copyright: 2020-2025 LateStation14 contributors
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
 License: MIT
 
 # Other resources (MIT)
@@ -169,7 +183,8 @@ Files: Resources/Audio/**
         Resources/IgnoredPrototypes/**
         Resources/Maps/**
         Resources/*.yml
-Copyright: 2020-2025 LateStation14 contributors
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
 License: MIT
 
 # Root files
@@ -198,14 +213,16 @@ Files: *.md
         LICENSE.TXT
         LICENSE-AGPLv3.txt
         SpaceStation14.sln
-Copyright: 2020-2025 LateStation14 contributors
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
 License: MIT
 
 # CI and build directories
 Files: .run/**
         BuildChecker/**
         BuildFiles/**
-Copyright: 2020-2025 LateStation14 contributors
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
 License: MIT
 
 # Additional Content.* projects (MIT)
@@ -220,10 +237,12 @@ Files: Content.Benchmarks/**
         Content.Tests/**
         Content.Tools/**
         Content.YAMLLinter/**
-Copyright: 2020-2025 LateStation14 contributors
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
 License: MIT
 
 # Misc top-level projects
 Files: Pow3r/**
-Copyright: 2020-2025 LateStation14 contributors
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
 License: MIT
