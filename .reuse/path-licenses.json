@@ -9,7 +9,8 @@
     { "pattern": "**/_Floofstation/**", "license": "AGPL" },
     { "pattern": "**/_Impstation/**", "license": "AGPL" },
     { "pattern": "**/_EinsteinEngines/**", "license": "AGPL" },
-    { "pattern": "**/_NF/**", "license": "MIT" },
+    { "pattern": "**/_NF/**", "license": "AGPL" },
+    { "pattern": "**/_Funkystation/**", "license": "AGPL" },
     { "pattern": "**/.github/**", "license": "MIT" }
   ]
 }
