@@ -73,7 +73,6 @@
   - type: Sprite
     sprite: _Funkystation/Objects/Weapons/Grenades/frozen-smoke-capsule.rsi
     state: icon
-  - type: TriggerOnSpawn
   - type: SmokeOnTrigger
     duration: 8
     spreadAmount: 1000
