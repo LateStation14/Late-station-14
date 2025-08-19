@@ -1,0 +1,8 @@
+Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+
+Canonical legal code (plain text):
+https://creativecommons.org/licenses/by-sa/3.0/legalcode.txt
+
+For the full, authoritative license text, please refer to the canonical URL above, as published by Creative Commons.
+
+Note: This repository references this license via SPDX identifier CC-BY-SA-3.0.

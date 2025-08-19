@@ -21,6 +21,9 @@
   <GuideEntityEmbed Entity="MobAvali" Caption="Avali"/>
   <GuideEntityEmbed Entity="MobFelinidDummy" Caption="Felinid"/>
   </Box>
+  <Box>
+  <GuideEntityEmbed Entity="MobResomiDummy" Caption="Resomi"/>
+  </Box>
 
 
 </Document>

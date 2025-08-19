@@ -4,11 +4,19 @@
 
 # LateStation14
 
-**LateStation** is a custom content fork of the official [Space Station 14](https://github.com/space-wizards/space-station-14) project. We aim to create our own gameplay experience, with original mechanics, stations, and assets — all while staying aligned with the upstream SS14 codebase.
+[![REUSE status](https://api.reuse.software/badge/github.com/LateStation14/Late-station-14)](https://api.reuse.software/info/github.com/LateStation14/Late-station-14)
+[![Build & Test Debug](https://github.com/LateStation14/Late-station-14/actions/workflows/build-test-debug.yml/badge.svg?branch=master)](https://github.com/LateStation14/Late-station-14/actions/workflows/build-test-debug.yml)
+[![YAML Linter](https://github.com/LateStation14/Late-station-14/actions/workflows/yaml-linter.yml/badge.svg?branch=master)](https://github.com/LateStation14/Late-station-14/actions/workflows/yaml-linter.yml)
+[![YAML map schema validator](https://github.com/LateStation14/Late-station-14/actions/workflows/validate_mapfiles.yml/badge.svg?branch=master)](https://github.com/LateStation14/Late-station-14/actions/workflows/validate_mapfiles.yml)
+[![Validate RSIs](https://github.com/LateStation14/Late-station-14/actions/workflows/validate-rsis.yml/badge.svg?branch=master)](https://github.com/LateStation14/Late-station-14/actions/workflows/validate-rsis.yml)
+[![YAML RGA schema validator](https://github.com/LateStation14/Late-station-14/actions/workflows/validate-rgas.yml/badge.svg?branch=master)](https://github.com/LateStation14/Late-station-14/actions/workflows/validate-rgas.yml)
 
-We are currently building our own identity on top of the core SS14 platform. While much of the game is still similar to upstream, LateStation is actively developing unique systems, content, and balance changes to support our own long-term vision.
+**LateStation** is a custom-content fork of the official [Space Station 14](https://github.com/space-wizards/space-station-14) project.
+We aim to create our own gameplay experience, with original mechanics, stations, and assets — while staying aligned with the upstream SS14 codebase.
 
-**Space Station 14** is a remake of the classic SS13, running on [RobustToolbox](https://github.com/space-wizards/RobustToolbox) — an open-source game engine written in C# and built specifically for multiplayer, tile-based simulation games like SS14.
+LateStation is steadily building its own identity on top of the SS14 platform. While much of the game remains familiar to upstream, LateStation actively develops new systems, balance changes, and unique content to support our long-term vision.
+
+**Space Station 14** is a remake of the classic SS13, running on [RobustToolbox](https://github.com/space-wizards/RobustToolbox) — an open-source engine written in C# and purpose-built for multiplayer, tile-based simulation games.
 
 ---
 
@@ -24,8 +32,8 @@ We are currently building our own identity on top of the core SS14 platform. Whi
 
 ## 📚 Documentation & Wiki
 
-- SS14 Docs: https://docs.spacestation14.io/ — Covers the engine, content, game design, mapping, modding, and more.
-- LateStation Contributions: See CONTRIBUTING.md — Read this first if you’re new and want to help out!
+- SS14 Docs: https://docs.spacestation14.io/ — covers engine, content, mapping, modding, and more.
+- LateStation Contributions: see [CONTRIBUTING.md](CONTRIBUTING.md) — read this first if you want to contribute!
 
 ---
 
@@ -33,8 +41,8 @@ We are currently building our own identity on top of the core SS14 platform. Whi
 
 We welcome contributions of all kinds — coding, spriting, mapping, balancing, and feedback.
 
-- Check out our CONTRIBUTING.md file.
-- Open a pull request or issue if you’d like to get involved.
+- Check out [CONTRIBUTING.md](CONTRIBUTING.md)
+- Open a pull request or issue to get involved
 
 ---
 
@@ -53,8 +61,7 @@ We welcome contributions of all kinds — coding, spriting, mapping, balancing, 
 
    dotnet build
 
-For full build and IDE setup instructions, see the SS14 Developer Docs:
-https://docs.spacestation14.com/en/general-development/setup.html
+For full IDE and build setup, see the [SS14 Developer Docs](https://docs.spacestation14.com/en/general-development/setup.html).
 
 ---
 
@@ -62,13 +69,18 @@ https://docs.spacestation14.com/en/general-development/setup.html
 
 ### Code
 
-- All original code created by the LateStation team (typically in `_LateStation/` folders) is **dual-licensed under MIT and AGPL-3.0-or-later** (as of this commit everything before this commit is still MIT)
-- Upstream code from [Wizards Den's Space Station 14](https://github.com/space-wizards/space-station-14) remains under the original **MIT License** and is preserved unmodified unless there have to be changes in order to make certain things work, but then its commented.
-- Contributors must follow licensing rules defined in our [CONTRIBUTING.md](CONTRIBUTING.md).
+- All **original LateStation code** (generally in `_LateStation/` folders) is **dual-licensed under MIT OR AGPL-3.0-or-later**.
+  (Code written before the switch remains MIT-only.)
+- **Upstream code** from [Wizards Den / Space Station 14](https://github.com/space-wizards/space-station-14) remains under the **MIT License**.
+  If changes are required to upstream files, they are commented to make merges and attribution clear.
+- Contributors agree to these terms when submitting code (see [CONTRIBUTING.md](CONTRIBUTING.md)).
+
+⚠️ **Note**: SPDX license headers are being added across the codebase to make licensing explicit.
+Files without headers are covered by the project-wide license policy until complete.
 
 ### Ported Code
 
-This repository contains content ported from other SS14 forks. These are stored in namespaced folders like:
+This repository also includes code ported from other SS14 forks, organized in namespaced folders:
 
 - `_AXOLOTL/` — [Axolotl MRP](https://github.com/Axolotl-MRP/axolotl-mrp-14)
 - `_CD/` — [Cosmatic Drift](https://github.com/cosmatic-drift-14/cosmatic-drift)
@@ -76,22 +88,20 @@ This repository contains content ported from other SS14 forks. These are stored 
 - `_Harmony/` — [Harmony](https://github.com/ss14-harmony/ss14-harmony)
 - `_NF/` — [Frontier](https://github.com/new-frontiers-14/frontier-station-14)
 
-Only code that is **MIT-licensed or dual-licensed** is ported into LateStation. All code is used in compliance with its original license, and attribution is preserved where applicable.
-
-⚠️ **Note**: Some code files do not yet include SPDX license headers. We are currently in the process of adding them to all original LateStation content.
-
-Code ported or modified from upstream (Wizards Den) or other SS14 forks retains its original license (typically MIT OR AGPL) and is marked or attributed where appropriate. Licensing is preserved even when changes are made.
+- Ported code retains its **original license** (MIT or AGPL).
+- Where dual-licensing is offered by the source, both options are preserved.
+- SPDX headers and comments are used to mark provenance and ensure compliance.
 
 ### 🖼️ Assets
 
-- Most assets (sprites, sounds, etc.) are licensed under Creative Commons Attribution-ShareAlike 3.0:
+- Most assets (sprites, sounds, etc.) are licensed under **CC BY-SA 3.0**:
   https://creativecommons.org/licenses/by-sa/3.0/
-  - Requires proper attribution
+  - Requires attribution
   - Requires derivative works to use the same license (share-alike)
-- Each asset directory includes a metadata file specifying its license and authorship.
+
+- Each asset folder contains a `meta.json` file that defines authorship and license.
   Example: `hop_turtle.rsi/meta.json`
 
-⚠️ **Note**: Some assets may be under non-commercial licenses, such as:
+⚠️ **Note**: Some assets are licensed under **CC BY-NC-SA 3.0** (non-commercial):
 https://creativecommons.org/licenses/by-nc-sa/3.0/
-
-These assets **cannot be used in commercial projects**. If you intend to use this project commercially, you will need to review and replace these assets.
+These cannot be used in commercial projects. Review and replace them if commercial use is intended.
