@@ -78,4 +78,5 @@
     spreadAmount: 1000
     smokePrototype: Resin
   - type: TimerTrigger
-    delay: 0.3
+    delay: 0.6
+  - type: TriggerOnSpawn
