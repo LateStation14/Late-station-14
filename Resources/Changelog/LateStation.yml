@@ -647,3 +647,23 @@ Entries:
       message: You can now bring up to five trinkets. Rejoice, smokers!
   id: 83
   time: '2025-08-15T12:42:38.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Admin records can be saved again
+  id: 84
+  time: '2025-08-16T11:51:59.0000000+00:00'
+- author: mogaiskii
+  changes:
+    - type: Add
+      message: Added new species - resomi (Urist McSmallRaptor)
+  id: 85
+  time: '2025-08-16T18:42:21.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Added Resomi to the guidebook
+    - type: Tweak
+      message: Tweaked the "raised by" traits.
+  id: 86
+  time: '2025-08-18T13:23:23.0000000+00:00'

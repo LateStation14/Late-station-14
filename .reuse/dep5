@@ -1,0 +1,229 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Late-station-14
+Source: https://github.com/<org>/Late-station-14
+
+# General upstream defaults
+
+Files: Content.Server/**
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
+License: MIT
+
+Files: Content.Client/**
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
+License: MIT
+
+Files: Content.Shared/**
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
+License: MIT
+
+Files: .github/**
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
+License: MIT
+
+# Docs and tools
+Files: Content.Docfx/**
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
+License: MIT
+
+Files: Tools/**
+Copyright: 2020-2025 Wizards Den contributors
+ 2020-2025 LateStation14 contributors (modifications)
+License: MIT
+
+# Fork-specific sections
+# LateStation code licensed under MIT OR AGPL-3.0-or-later
+Files: Content.Server/_LateStation/**
+        Content.Client/_LateStation/**
+        Content.Shared/_LateStation/**
+        Resources/_LateStation/**
+        Resources/Prototypes/_LateStation/**
+Copyright: 2020-2025 LateStation14 contributors
+License: MIT OR AGPL-3.0-or-later
+
+# AXOLOTL code licensed under MIT
+Files: Content.Server/_AXOLOTL/**
+        Content.Client/_AXOLOTL/**
+        Content.Shared/_AXOLOTL/**
+        Resources/_AXOLOTL/**
+        Resources/Prototypes/_AXOLOTL/**
+Copyright: Contributors of the _AXOLOTL upstream project
+ 2020-2025 LateStation14 contributors (modifications)
+ 2020-2025 AXOLOTL contributors
+License: MIT
+
+# CD (Cosmatic Drift) code licensed under MIT
+Files: Content.Server/_CD/**
+        Content.Client/_CD/**
+        Content.Shared/_CD/**
+        Resources/_CD/**
+        Resources/Prototypes/_CD/**
+Copyright: Contributors of the _CD upstream project
+ 2020-2025 LateStation14 contributors (modifications)
+ 2020-2025 CD contributors
+License: MIT
+
+# DV (Delta-V) code licensed under AGPL-3.0-or-later
+Files: Content.Server/_DV/**
+        Content.Client/_DV/**
+        Content.Shared/_DV/**
+        Resources/_DV/**
+        Resources/Prototypes/_DV/**
+Copyright: Contributors of the _DV upstream project
+ 2020-2025 LateStation14 contributors (modifications)
+ 2020-2025 Delta-V contributors
+License: AGPL-3.0-or-later
+
+# NF (Frontier) code licensed under AGPL-3.0-or-later
+Files: Content.Server/_NF/**
+        Content.Client/_NF/**
+        Content.Shared/_NF/**
+        Resources/_NF/**
+        Resources/Prototypes/_NF/**
+Copyright: Contributors of the _NF upstream project
+ 2020-2025 LateStation14 contributors (modifications)
+ 2020-2025 Frontier contributors
+License: AGPL-3.0-or-later
+
+# Harmony code licensed under AGPL-3.0-or-later
+Files: Content.Server/_Harmony/**
+        Content.Client/_Harmony/**
+        Content.Shared/_Harmony/**
+        Resources/_Harmony/**
+        Resources/Prototypes/_Harmony/**
+Copyright: Contributors of the _Harmony upstream project
+ 2020-2025 LateStation14 contributors (modifications)
+ 2020-2025 Harmony contributors
+License: AGPL-3.0-or-later
+
+# Umbra code licensed under MIT
+Files: Content.Server/_Umbra/**
+        Content.Client/_Umbra/**
+        Content.Shared/_Umbra/**
+        Resources/_Umbra/**
+        Resources/Prototypes/_Umbra/**
+Copyright: Contributors of the _Umbra upstream project
+ 2020-2025 LateStation14 contributors (modifications)
+ 2020-2025 Umbra contributors
+License: MIT
+
+# Floofstation code licensed under AGPL-3.0-or-later
+Files: Content.Server/_Floofstation/**
+        Content.Client/_Floofstation/**
+        Content.Shared/_Floofstation/**
+        Resources/_Floofstation/**
+        Resources/Prototypes/_Floofstation/**
+Copyright: Contributors of the _Floofstation upstream project
+ 2020-2025 LateStation14 contributors (modifications)
+ 2020-2025 Floofstation contributors
+License: AGPL-3.0-or-later
+
+# Impstation code licensed under AGPL-3.0-or-later
+Files: Content.Server/_Impstation/**
+        Content.Client/_Impstation/**
+        Content.Shared/_Impstation/**
+        Resources/_Impstation/**
+        Resources/Prototypes/_Impstation/**
+Copyright: Contributors of the _Impstation upstream project
+ 2020-2025 LateStation14 contributors (modifications)
+ 2020-2025 Impstation contributors
+License: AGPL-3.0-or-later
+
+# EinsteinEngines code licensed under AGPL-3.0-or-later
+Files: Content.Server/_EinsteinEngines/**
+        Content.Client/_EinsteinEngines/**
+        Content.Shared/_EinsteinEngines/**
+        Resources/_EinsteinEngines/**
+        Resources/Prototypes/_EinsteinEngines/**
+Copyright: Contributors of the _EinsteinEngines upstream project
+ 2020-2025 LateStation14 contributors (modifications)
+ 2020-2025 EinsteinEngines contributors
+License: AGPL-3.0-or-later
+
+# Assets
+Files: Resources/Textures/**
+Copyright: 2020-2025 LateStation14 contributors
+License: CC-BY-SA-3.0
+
+# Localizations
+Files: Resources/Locale/**
+Copyright: 2020-2025 LateStation14 contributors
+License: MIT
+
+# Prototypes and server info (MIT)
+Files: Resources/Prototypes/**
+        Resources/ServerInfo/**
+Copyright: 2020-2025 LateStation14 contributors
+License: MIT
+
+# Other resources (MIT)
+Files: Resources/Audio/**
+        Resources/Changelog/**
+        Resources/ConfigPresets/**
+        Resources/Credits/**
+        Resources/Fonts/**
+        Resources/IgnoredPrototypes/**
+        Resources/Maps/**
+        Resources/*.yml
+Copyright: 2020-2025 LateStation14 contributors
+License: MIT
+
+# Root files
+Files: *.md
+        *.txt
+        *.nix
+        *.lock
+        *.toml
+        *.sln*
+        *.bat
+        *.sh
+        *.py
+        *.props
+        *.csproj.DotSettings
+        *.json
+        .editorconfig
+        .envrc
+        .gitattributes
+        .gitignore
+        .gitmodules
+        bors.toml
+        nuget.config
+        global.json
+        omnisharp.json
+        README.md
+        LICENSE.TXT
+        LICENSE-AGPLv3.txt
+        SpaceStation14.sln
+Copyright: 2020-2025 LateStation14 contributors
+License: MIT
+
+# CI and build directories
+Files: .run/**
+        BuildChecker/**
+        BuildFiles/**
+Copyright: 2020-2025 LateStation14 contributors
+License: MIT
+
+# Additional Content.* projects (MIT)
+Files: Content.Benchmarks/**
+        Content.IntegrationTests/**
+        Content.MapRenderer/**
+        Content.Packaging/**
+        Content.PatreonParser/**
+        Content.Replay/**
+        Content.Server.Database/**
+        Content.Shared.Database/**
+        Content.Tests/**
+        Content.Tools/**
+        Content.YAMLLinter/**
+Copyright: 2020-2025 LateStation14 contributors
+License: MIT
+
+# Misc top-level projects
+Files: Pow3r/**
+Copyright: 2020-2025 LateStation14 contributors
+License: MIT

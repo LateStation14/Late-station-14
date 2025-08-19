@@ -1,0 +1,15 @@
+{
+  "rules": [
+    { "pattern": "**/_CD/**", "license": "MIT" },
+    { "pattern": "**/_Harmony/**", "license": "AGPL" },
+    { "pattern": "**/_DV/**", "license": "AGPL" },
+    { "pattern": "**/_AXOLOTL/**", "license": "MIT" },
+    { "pattern": "**/_LateStation/**", "license": "mit+agpl" },
+    { "pattern": "**/_Umbra/**", "license": "MIT" },
+    { "pattern": "**/_Floofstation/**", "license": "AGPL" },
+    { "pattern": "**/_Impstation/**", "license": "AGPL" },
+    { "pattern": "**/_EinsteinEngines/**", "license": "AGPL" },
+    { "pattern": "**/_NF/**", "license": "MIT" },
+    { "pattern": "**/.github/**", "license": "MIT" }
+  ]
+}

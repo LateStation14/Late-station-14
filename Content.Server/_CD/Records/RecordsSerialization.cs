@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2024 Cosmatic drift
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Server.Database;
 using Content.Shared._CD.Records;
 using System.Diagnostics.CodeAnalysis;
@@ -89,6 +94,7 @@ public static class RecordsSerialization
         return records.MedicalEntries.Select(medical => ConvertEntry(medical, CDModel.DbRecordEntryType.Medical))
             .Concat(records.SecurityEntries.Select(security => ConvertEntry(security, CDModel.DbRecordEntryType.Security)))
             .Concat(records.EmploymentEntries.Select(employment => ConvertEntry(employment, CDModel.DbRecordEntryType.Employment)))
+            .Concat(records.AdminEntries.Select(employment => ConvertEntry(employment, CDModel.DbRecordEntryType.Admin)))
             .ToList();
     }
 }
