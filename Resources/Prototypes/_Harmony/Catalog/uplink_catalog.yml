@@ -1,14 +1,5 @@
 # Guns
 # Explosives
-- type: listing
-  id: UplinkPizzaBomb
-  name: uplink-pizza-bomb-name
-  description: uplink-pizza-bomb-desc
-  productEntity: Pizzabomb
-  cost:
-    Telecrystal: 4
-  categories:
-  - UplinkExplosives
 # Ammo
 # Chemicals
 - type: listing
@@ -98,17 +89,6 @@
     blacklist:
       tags:
         - NukeOpsUplink
-
-# Pointless
-- type: listing
-  id: UplinkClusterWeh
-  name: uplink-cluster-weh-name
-  description: uplink-cluster-weh-desc
-  productEntity: ClusterWeh
-  cost:
-    Telecrystal: 3
-  categories:
-  - UplinkPointless
 
 # Job Specific
 - type: listing

@@ -5,7 +5,8 @@
     TraitorObjectiveGroupSteal: 1
     TraitorObjectiveGroupKill: 1
     TraitorObjectiveGroupState: 1 #As in, something about your character. Alive, dead, arrested, gained an ability...
-    TraitorObjectiveGroupSocial: 0.5 # Harmony. Change: 1 -> 0.5 #Involves helping/harming others without killing them or stealing their stuff
+    TraitorObjectiveGroupSocial: 1 #Involves helping/harming others without killing them or stealing their stuff
+
 - type: weightedRandom
   id: TraitorObjectiveGroupSteal
   weights:
@@ -27,14 +28,12 @@
   weights:
     KillRandomPersonObjective: 1
     KillRandomHeadObjective: 0.25
-    TeachLessonRandomPersonObjective: 1 #Harmony objective
 
 - type: weightedRandom
   id: TraitorObjectiveGroupState
   weights:
-    EscapeShuttleObjective: 0.4 #Harmony change: 1 -> 0.4
-    DieObjective: 0.15 # Harmony. Change: 0.05 -> 0.15
-    TraitorSurviveObjective: 0.6 #Harmony objective
+    EscapeShuttleObjective: 1
+    DieObjective: 0.05
     #HijackShuttleObjective: 0.02
 
 - type: weightedRandom
@@ -75,7 +74,6 @@
     FlippoEngravedLighterStealObjective: 0.5
     ClothingHeadHatWardenStealObjective: 1
     WantedListCartridgeStealObjective: 1
-    ClothingNeckShockCollarStealObjective: 1
     ClothingOuterHardsuitVoidParamedStealObjective: 1   #med
     MedicalTechFabCircuitboardStealObjective: 1
     ClothingHeadsetAltMedicalStealObjective: 1

@@ -38,7 +38,7 @@
 
 - type: technology
   id: WeaponizedLaserManipulation
-  name: research-technology-weaponized-laser-manipulation # Latestation change: name changed to "Basic Lenses and Laser Manipulation" in the .ftl file, to minimize future conflicts.
+  name: research-technology-weaponized-laser-manipulation
   icon:
     sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
     state: icon
@@ -47,8 +47,6 @@
   cost: 7500
   recipeUnlocks:
   - WeaponLaserCarbine
-  - Binoculars # Latestation addition.
-  - WeaponEnergyCarbineHarmony # Harmony Change: Adds the energy Carbine to the Laser Munipulation Research.
 
 - type: technology
   id: NonlethalAmmunition
@@ -144,8 +142,6 @@
   cost: 10000
   recipeUnlocks:
   - WeaponLaserCannon
-  - WeaponEnergyAutorifle # Latestation Addition
-  - EnergyCartridgeUnstablePrintedHarmony # Harmony Change: Adds the Unstable Energy Cartridge to the Concentrated Laser Research
 
 - type: technology
   id: WaveParticleHarnessing
@@ -158,7 +154,6 @@
   cost: 10000
   recipeUnlocks:
   - WeaponXrayCannon
-  - EnergyCartridgeXRayPrintedHarmony # Harmony Change: Adds the X-ray Energy Cartridge to the Wave Particle Research
 
 - type: technology
   id: KineticModifications
@@ -195,6 +190,18 @@
   - ShuttleGunFriendshipCircuitboard
   technologyPrerequisites:
   - SalvageWeapons
+
+- type: technology
+  id: DualWieldingTechnology
+  name: research-technology-dual-wielding-technology
+  icon:
+    sprite: Clothing/Back/Specific/harmpack.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - ClothingBackpackHarmpack
 
 # Tier 3
 

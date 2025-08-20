@@ -1,0 +1,97 @@
+- type: reagent
+  id: Polymorphine
+  name: reagent-name-polymorphine
+  group: Experimental
+  desc: reagent-desc-polymorphine
+  physicalDesc: reagent-physical-desc-pale
+  flavor: nothing
+  color: "#a150b5"
+  metabolisms:
+    Drink:
+      metabolismRate: 1
+      effects:
+      # note: THIS also sucks - CobaltBox
+      - !type:Polymorph
+        probability: 0.084
+        prototype: HumanPoly
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: MothPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: VoxPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: DionaPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: SlimePoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: ArachnidPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: DwarfPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: VulpkaninPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: AvaliPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: FelinidPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: HarpyPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: ReptilianPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: ScurretPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13
+      - !type:Polymorph
+        prototype: KoboldPoly
+        probability: 0.084
+        conditions:
+        - !type:ReagentThreshold
+          min: 13

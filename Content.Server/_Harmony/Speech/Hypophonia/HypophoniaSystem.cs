@@ -55,10 +55,6 @@ namespace Content.Server._Harmony.Speech.Hypophonia
             if (HasComp<VentriloquistPuppetComponent>(uid) || HasComp<MutedComponent>(uid))
                 return;
 
-            // If the entity is whispering, let them speak
-            if (args.Whisper)
-                return;
-
             // Cancel the event and show the popup
             _popupSystem.PopupEntity(Loc.GetString("speech-hypophonia"), uid, uid);
             args.Cancel();

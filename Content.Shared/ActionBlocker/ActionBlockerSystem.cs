@@ -150,10 +150,10 @@ namespace Content.Shared.ActionBlocker
             return !itemEv.Cancelled;
         }
 
-        public bool CanSpeak(EntityUid uid, bool whisper = false) // Harmony change: Added whisper flag for hypophonia trait
+        public bool CanSpeak(EntityUid uid)
         {
             // This one is used as broadcast
-            var ev = new SpeakAttemptEvent(uid, whisper);
+            var ev = new SpeakAttemptEvent(uid);
             RaiseLocalEvent(uid, ev, true);
 
             return !ev.Cancelled;

@@ -1,7 +1,6 @@
 using Content.Shared.Cargo.Prototypes;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
-using Content.Shared.CrewManifest;
 
 namespace Content.Shared.Cargo.BUI;
 
@@ -14,9 +13,8 @@ public sealed class CargoConsoleInterfaceState : BoundUserInterfaceState
     public NetEntity Station;
     public List<CargoOrderData> Orders;
     public List<ProtoId<CargoProductPrototype>> Products;
-    public CrewManifestEntries? CrewManifest;
 
-    public CargoConsoleInterfaceState(string name, int count, int capacity, NetEntity station, List<CargoOrderData> orders, List<ProtoId<CargoProductPrototype>> products, CrewManifestEntries? crewManifest = null)
+    public CargoConsoleInterfaceState(string name, int count, int capacity, NetEntity station, List<CargoOrderData> orders, List<ProtoId<CargoProductPrototype>> products)
     {
         Name = name;
         Count = count;
@@ -24,6 +22,5 @@ public sealed class CargoConsoleInterfaceState : BoundUserInterfaceState
         Station = station;
         Orders = orders;
         Products = products;
-        CrewManifest = crewManifest;
     }
 }

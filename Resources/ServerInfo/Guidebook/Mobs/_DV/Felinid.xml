@@ -1,0 +1,26 @@
+<Document>
+  # Felinids
+
+  <Box>
+    <GuideEntityEmbed Entity="MobFelinidDummy" Caption=""/>
+  </Box>
+
+  Small and mischievous cat-eared people. Being small in itself has lots of upsides and downsides.
+
+  ## Diet
+
+  - Can eat raw meat.
+  - Will get poisoned by Theobromine (Chocolate, Tea, Coffee) and Allicin (Onion, Garlic).
+
+  ## Benefits
+
+  - Their claws do Slash and Piercing damage.
+  - Can walk completely silently, but only while barefoot.
+  - They're slowed down less when hurt.
+
+  ## Drawbacks
+
+  - They take [color=#ffa500]15% more Blunt, Slash and Piercing damage[/color].
+  - They have slightly less stamina than Humans.
+
+</Document>

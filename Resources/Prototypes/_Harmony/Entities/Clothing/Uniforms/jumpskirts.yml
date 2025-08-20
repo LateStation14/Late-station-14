@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ClothingUniformBase, BaseCommandContraband]
+  parent: [ClothingUniformSkirtBase, BaseCommandContraband] # LateStation Change, make it so that ClothingUniformSkirtBase is used for Harpies
   id: ClothingUniformJumpskirtCaptainTurtleneckHarmony
   name: captain's turtleneck
   description: A regal blue turtleneck sweater finely made with mothroach silk. Fit for a captain.
@@ -10,7 +10,7 @@
     sprite: _Harmony/Clothing/Uniforms/Jumpskirt/capturtleskirt.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseCommandContraband]
+  parent: [ClothingUniformSkirtBase, BaseCommandContraband] # LateStation Change, make it so that ClothingUniformSkirtBase is used for Harpies
   id: ClothingUniformJumpskirtHeadOfPersonnelTurtleneckHarmony
   name: head of personnel's turtleneck
   description: A blue turtle neck meant to amplify the comfort of the office. Watch out for dog hairs.
@@ -21,7 +21,7 @@
     sprite: _Harmony/Clothing/Uniforms/Jumpskirt/hop_turtle.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseCommandContraband]
+  parent: [ClothingUniformSkirtBase, BaseCommandContraband] # LateStation Change, make it so that ClothingUniformSkirtBase is used for Harpies
   id: ClothingUniformJumpskirtHeadofPersonnelMessKitHarmony
   name: head of personnel's mess kit
   description: A blue denim skirt with pockets and a gold trimmed white shirt.
@@ -32,7 +32,7 @@
     sprite: _Harmony/Clothing/Uniforms/Jumpskirt/hopmesskit.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseCommandContraband]
+  parent: [ClothingUniformSkirtBase, BaseCommandContraband] # LateStation Change, make it so that ClothingUniformSkirtBase is used for Harpies
   id: ClothingUniformJumpskirtHeadOfSecurityTurtleneckHarmony
   name: head of security's turtleneck
   description: You feel... innovative. Maybe you'll find a way to permabrig the clown later.
@@ -43,7 +43,7 @@
     sprite: _Harmony/Clothing/Uniforms/Jumpskirt/hos_turtle.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseSecurityContraband]
+  parent: [ClothingUniformSkirtBase, BaseSecurityContraband] # LateStation Change, make it so that ClothingUniformSkirtBase is used for Harpies
   id: ClothingUniformJumpskirtDetectiveBlueHarmony
   name: detective's blue suitskirt
   description: For when the time calls for you to find the clues, which happen to be blue.
@@ -54,7 +54,7 @@
     sprite: _Harmony/Clothing/Uniforms/Jumpskirt/det_blue.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # LateStation Change, make it so that ClothingUniformSkirtBase is used for Harpies
   id: ClothingUniformJumpskirtCargoOfficeSkirtHarmony
   name: cargo office skirt
   description: For those who'd rather push pencils than crates.
@@ -65,7 +65,7 @@
     sprite: _Harmony/Clothing/Uniforms/Jumpskirt/cargo_skirt.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # LateStation Change, make it so that ClothingUniformSkirtBase is used for Harpies
   id: ClothingUniformJumpskirtSeniorTechnicianHarmony
   name: senior technician jumpskirt
   description: For the veteran freight movers, you've earned it.

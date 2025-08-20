@@ -44,10 +44,14 @@ public sealed class CharacterRecordsSystem : EntitySystem
             return;
 
         var profile = args.Profile;
+        // Be robust: if records are missing, initialize them to defaults instead of bailing.
         if (profile.CDCharacterRecords == null)
         {
-            Log.Error($"Null records in CharacterRecordsSystem::OnPlayerSpawn for character {args.Profile.Name} played by {args.Player.Name}.");
-            return;
+            profile.CDCharacterRecords = PlayerProvidedCharacterRecords.DefaultRecords();
+        }
+        else
+        {
+            profile.CDCharacterRecords.EnsureValid();
         }
 
         var player = args.Mob;
@@ -91,7 +95,7 @@ public sealed class CharacterRecordsSystem : EntitySystem
             return null;
 
         var keyStorageEntity = idUid;
-        if (TryComp<PdaComponent>(idUid, out var pda) && pda.ContainedId is {} id)
+    if (TryComp<PdaComponent>(idUid, out var pda) && pda.ContainedId is { } id)
         {
             keyStorageEntity = id;
         }

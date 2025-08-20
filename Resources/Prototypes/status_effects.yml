@@ -9,10 +9,6 @@
   alert: Stun
 
 - type: statusEffect
-  id: KnockedDown
-  alert: Stun
-
-- type: statusEffect
   id: SlowedDown
 
 - type: statusEffect
@@ -66,6 +62,3 @@
 - type: statusEffect
   id: Adrenaline
   alert: Adrenaline
-
-- type: statusEffect # Latestation addition
-  id: PointLight

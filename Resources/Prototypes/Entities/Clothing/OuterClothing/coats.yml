@@ -12,15 +12,13 @@
 - type: entity
   parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBase]
   id: ClothingOuterCoatDetective
-  name: detective's trenchcoat # Harmony Change - Updates name.
+  name: detective trenchcoat
   description: An 18th-century multi-purpose trenchcoat. Someone who wears this means serious business.
   components:
-# Harmony Change: Updated sprite pathing.
   - type: Sprite
-    sprite: _Harmony/Clothing/OuterClothing/Coats/detective.rsi
+    sprite: Clothing/OuterClothing/Coats/detective.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/OuterClothing/Coats/detective.rsi
-# End of Harmony changes.
+    sprite: Clothing/OuterClothing/Coats/detective.rsi
   - type: StorageFill
     contents:
     - id: SmokingPipeFilledTobacco
@@ -31,15 +29,14 @@
 - type: entity
   parent: [ClothingOuterCoatDetectiveLoadout]
   id: ClothingOuterCoatDetectiveLoadoutGrey
-  name: detective's noir trenchcoat # Harmony Change - Updates name for consistency.
+  name: noir trenchcoat
   description: Ah, your trusty coat. There's a few tears here and there, giving it a more timely look. Or at least, that's what you told yourself when you found out gettin' it repaired would set you back 200 spesos.
   components:
-# Harmony Change: Updated sprite pathing.
   - type: Sprite
-    sprite: _Harmony/Clothing/OuterClothing/Coats/detective_grey.rsi
+    sprite: Clothing/OuterClothing/Coats/detective_grey.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/OuterClothing/Coats/detective_grey.rsi
-# End of Harmony changes.
+    sprite: Clothing/OuterClothing/Coats/detective_grey.rsi
+
 
 - type: entity
   parent: ClothingOuterCoatDetective
@@ -98,11 +95,11 @@
   id: ClothingOuterCoatHoSTrench
   name: head of security's armored trenchcoat
   description: A greatcoat enhanced with a special alloy for some extra protection and style for those with a commanding presence.
-  components: #Harmony Update:Updating pathing for the new HoS coat
+  components:
   - type: Sprite
-    sprite: _Harmony/Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
+    sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
+    sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
 
 - type: entity
   parent: ClothingOuterStorageToggleableBase
@@ -317,8 +314,7 @@
     sprite: Clothing/OuterClothing/Coats/pirate.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/pirate.rsi
-    
-#Harmony Change: Updated Pathing for security resprite update
+
 - type: entity
   parent: [ClothingOuterArmorWarden, ClothingOuterStorageBase, BaseSecurityContraband]
   id: ClothingOuterCoatWarden
@@ -326,9 +322,9 @@
   description: A sturdy, utilitarian jacket designed to protect a warden from any brig-bound threats.
   components:
   - type: Sprite
-    sprite: _Harmony/Clothing/OuterClothing/Coats/warden.rsi
+    sprite: Clothing/OuterClothing/Coats/warden.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/OuterClothing/Coats/warden.rsi
+    sprite: Clothing/OuterClothing/Coats/warden.rsi
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -403,34 +399,23 @@
     sprite: Clothing/OuterClothing/Coats/syndicate/coatsyndiecaparmored.rsi
 
 - type: entity
-  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing] # Harmony Change: Added Suit Storage
+  parent: ClothingOuterStorageBase
   id: ClothingOuterCoatAMG
   name: armored medical gown
   description: The version of the medical gown, with elements of a bulletproof vest, looks strange, but your heart is protected.
   components:
   - type: Sprite
-# Start of Harmony Change: Updated Sprite Pathing
-    sprite: _Harmony/Clothing/OuterClothing/Coats/brigmedic.rsi
+    sprite: Clothing/OuterClothing/Coats/brigmedic.rsi
   - type: Clothing
-    sprite: _Harmony/Clothing/OuterClothing/Coats/brigmedic.rsi
-# End of Harmony Change
+    sprite: Clothing/OuterClothing/Coats/brigmedic.rsi
   - type: Armor
     modifiers:
       coefficients:
-# Start of Harmony Change: Updates Armor Values
-#        Blunt: 0.8
-#        Slash: 0.85
-#        Piercing: 0.65
-#        Heat: 0.85
-#        Caustic: 0.75
-        Blunt: 0.70
-        Slash: 0.70
-        Piercing: 0.70
-        Heat: 0.80
+        Blunt: 0.8
+        Slash: 0.85
+        Piercing: 0.65
+        Heat: 0.85
         Caustic: 0.75
-  - type: ExplosionResistance
-    damageCoefficient: 0.90
-# End of Harmony Change
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase

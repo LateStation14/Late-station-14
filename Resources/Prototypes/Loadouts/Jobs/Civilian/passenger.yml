@@ -6,7 +6,7 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobPassenger
-      time: 10800 # harmony: 10 hrs -> 3 hrs (~2 rounds)
+      time: 36000 #10 hrs, silly reward for people who play passenger a lot
 
 # Head of Greytide (for grey mantle)
 - type: loadoutEffectGroup
@@ -21,9 +21,6 @@
 # Face
 - type: loadout
   id: PassengerFace
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: GreyTider
   equipment:
     mask: ClothingMaskGas
 
@@ -42,27 +39,18 @@
 # Rainbow
 - type: loadout
   id: RainbowJumpsuit
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: GreyTider
   equipment:
     jumpsuit: ClothingUniformColorRainbow
 
 # Rainbow Jumpskirt
 - type: loadout
   id: RainbowJumpskirt
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: GreyTider
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorRainbow
 
 # Ancient
 - type: loadout
   id: AncientJumpsuit
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: GreyTider
   equipment:
     jumpsuit: ClothingUniformJumpsuitAncient
 
@@ -71,9 +59,6 @@
   id: Mantle
   equipment:
     neck: ClothingNeckMantle
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterGrey
 
 - type: startingGear
   id: Mantle
@@ -99,9 +84,6 @@
 # Gloves
 - type: loadout
   id: PassengerGloves
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: GreyTider
   equipment:
     gloves: ClothingHandsGlovesFingerlessInsulated
 

@@ -30,7 +30,9 @@ If this PR is purely code, small fixes, or backend-only, you can omit this.
 <!-- Confirm the following by placing an X inside each [ ] -->
 - [ ] I have tested all added content and code changes.
 - [ ] I have added media to this PR, or it does not require an in-game showcase.
-- [ ] I understand that by submitting this PR, my code contributions are licensed under the MIT License used by LateStation.
+- [ ] I understand that by submitting this PR, my code contributions are licensed under the **MIT License** and **AGPL-3.0-or-later**, in line with LateStation’s dual-licensing model.
+<!-- This only applies if the code is ported from other forks -->
+- [ ] If this PR ports or modifies AGPL code/assets, I have clearly marked it with an SPDX license header.
 
 <!-- PRs that do not follow these requirements may be delayed or closed. -->
 

@@ -21,3 +21,9 @@ jobs:
       uses: actions-ecosystem/action-add-labels@v1
       with:
         labels: "S: Approved"
+    - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
+      uses: actions-ecosystem/action-remove-labels@v1
+      with:
+        labels: |
+          S: Needs Review
+          S: Awaiting Changes

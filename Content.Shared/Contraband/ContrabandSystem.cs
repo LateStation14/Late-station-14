@@ -86,8 +86,7 @@ public sealed class ContrabandSystem : EntitySystem
         // text based on ID card
         List<ProtoId<DepartmentPrototype>> departments = new();
         var jobId = "";
-        if (_id.TryFindIdCard(args.User, out var id)
-            && id.Comp.AllowRestrictedContraband) // Harmony: check if the id allows restricted contraband
+        if (_id.TryFindIdCard(args.User, out var id))
         {
             departments = id.Comp.JobDepartments;
             if (id.Comp.LocalizedJobTitle is not null)

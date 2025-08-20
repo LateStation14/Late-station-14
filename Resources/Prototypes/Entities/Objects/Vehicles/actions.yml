@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: ActionVehicleHorn
   name: Honk
   description: Honk!

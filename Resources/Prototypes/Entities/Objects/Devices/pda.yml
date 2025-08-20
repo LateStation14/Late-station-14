@@ -219,7 +219,7 @@
     state: pda-internmed
   - type: GuideHelp
     guides:
-    - Medical Doctor
+    - MedicalDoctor
 
 - type: entity
   parent: BaseSecurityPDA
@@ -759,7 +759,7 @@
     state: pda-medical
   - type: GuideHelp
     guides:
-    - Medical Doctor
+    - MedicalDoctor
 
 - type: entity
   parent: MedicalPDA
@@ -923,6 +923,7 @@
     id: CentcomIDCard
     penSlot:
       startingItem: PenCentcom
+      priority: -1
       whitelist:
         tags:
         - Write
@@ -1090,7 +1091,6 @@
     preinstalled:
       - NotekeeperCartridge
       - NanoTaskCartridge
-      - AstroNavCartridge # Harmony change to give Syndicate PDA AstroNav
 
 - type: entity
   parent: BaseSecurityPDA
@@ -1465,10 +1465,9 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - MedTekCartridge
-      - AstroNavCartridge # Harmony change to give Syndicate Agent PDA AstroNav
 
 - type: entity
-  parent: BasePDA
+  parent: [BasePDA, VoiceLock]
   id: ChameleonPDA
   name: passenger PDA
   description: Why isn't it gray?

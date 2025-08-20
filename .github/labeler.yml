@@ -1,6 +1,7 @@
 ﻿"Changes: Sprites":
 - changed-files:
   - any-glob-to-any-file: '**/*.rsi/*.png'
+  - any-glob-to-any-file: '**/*.rsi/*.json'
 
 "Changes: Map":
 - changed-files:
@@ -8,19 +9,48 @@
     - 'Resources/Maps/**/*.yml'
     - 'Resources/Prototypes/Maps/**/*.yml'
 
+"Changes: Prototypes":
+- changed-files:
+  - any-glob-to-any-file:
+    - 'Resources/Prototypes/**/*.yml'
+    - '!Resources/Prototypes/Maps/**/*.yml'
+
 "Changes: UI":
 - changed-files:
   - any-glob-to-any-file: '**/*.xaml*'
+  - any-glob-to-any-file: '**/*.axaml*'
+  - any-glob-to-any-file: '**/*.css'
+  - any-glob-to-any-file: '**/*.scss'
 
 "Changes: Shaders":
 - changed-files:
   - any-glob-to-any-file: '**/*.swsl'
+  - any-glob-to-any-file: '**/*.hlsl'
+  - any-glob-to-any-file: '**/*.glsl'
 
 "Changes: Audio":
 - changed-files:
   - any-glob-to-any-file: '**/*.ogg'
+  - any-glob-to-any-file: '**/*.wav'
+  - any-glob-to-any-file: '**/*.mp3'
 
 "Changes: No C#":
 - changed-files:
   # Equiv to any-glob-to-all as long as this has one matcher. If ALL changed files are not C# files, then apply label.
   - all-globs-to-all-files: "!**/*.cs"
+
+"Changes: C#":
+- changed-files:
+  - any-glob-to-any-file: '**/*.cs'
+
+"Changes: Docs":
+- changed-files:
+  - any-glob-to-any-file:
+    - '**/*.md'
+    - 'Content.Docfx/**'
+
+"Changes: CI":
+- changed-files:
+  - any-glob-to-any-file:
+    - '.github/workflows/**'
+    - '.github/actions/**'

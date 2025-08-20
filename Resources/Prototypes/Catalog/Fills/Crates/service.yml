@@ -2,7 +2,7 @@
   id: CrateServiceJanitorialSupplies
   parent: CratePlastic
   name: janitorial supplies crate
-  description: Fight back against dirt and grime with Nanotrasen's Janitorial Essentials(tm)! Contains three buckets, caution signs, and cleaner grenades. Also has a single mop, broom, spray cleaner, rag, and trash bag.
+  description: Fight back against dirt and grime with Nanotrasen's Janitorial Essentials(tm)! Contains three buckets, caution signs, and cleaner grenades. Also has a single mop, broom, spray cleaner, wire brush, rag, and trash bag.
   components:
   - type: StorageFill
     contents:
@@ -20,7 +20,8 @@
       - id: Plunger
         amount: 2
       - id: BoxCleanerGrenades
-      - id: ToyRubberDuck # Harmony change. More ways to spawn duckies
+      - id: WireBrush
+        amount: 2
 
 - type: entity
   id: CrateServiceCleanerGrenades
@@ -155,7 +156,6 @@
     - id: NewtonCradle
     - id: BoxEnvelope
     - id: BrbSign
-    - id: ClothingNeckLanyard #Harmony addition. Also obtainable through character loadouts and PTech vendor
 
 - type: entity
   id: CrateServiceFaxMachine

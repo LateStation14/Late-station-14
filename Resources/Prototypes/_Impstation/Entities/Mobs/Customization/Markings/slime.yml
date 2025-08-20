@@ -42,7 +42,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
     state: eyeglow
-  shader: unshaded
 
 - type: marking
   id: SlimeLungs

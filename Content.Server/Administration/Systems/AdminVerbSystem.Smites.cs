@@ -39,6 +39,7 @@ using Content.Shared.Movement.Systems;
 using Content.Shared.Nutrition.Components;
 using Content.Shared.Popups;
 using Content.Shared.Slippery;
+using Content.Shared.Stunnable;
 using Content.Shared.Tabletop.Components;
 using Content.Shared.Tools.Systems;
 using Content.Shared.Verbs;
@@ -48,9 +49,9 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
+using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Timer = Robust.Shared.Timing.Timer;
-using Content.Server._Latestation.Speech.Components;//Harmony added-Valley Girl Acent
 
 namespace Content.Server.Administration.Systems;
 
@@ -878,7 +879,7 @@ public sealed partial class AdminVerbSystem
                 if (!hadSlipComponent)
                 {
                     slipComponent.SlipData.SuperSlippery = true;
-                    slipComponent.SlipData.ParalyzeTime = TimeSpan.FromSeconds(5);
+                    slipComponent.SlipData.StunTime = TimeSpan.FromSeconds(5);
                     slipComponent.SlipData.LaunchForwardsMultiplier = 20;
                 }
 
@@ -924,22 +925,19 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(omniaccent);
 
-        //Harmony change start-Added Valley Girl Smite
-        var valleyGirlName = Loc.GetString("admin-smite-valley-accent-name").ToLowerInvariant();
-        Verb valleyaccent = new()
+        var crawlerName = Loc.GetString("admin-smite-crawler-name").ToLowerInvariant();
+        Verb crawler = new()
         {
-            Text = valleyGirlName,
+            Text = crawlerName,
             Category = VerbCategory.Smite,
-            Icon = new SpriteSpecifier.Rsi(new("Interface/Actions/voice-mask.rsi"), "icon"),
+            Icon = new SpriteSpecifier.Rsi(new("Mobs/Animals/snake.rsi"), "icon"),
             Act = () =>
             {
-                EnsureComp<ValleyGirlAccentComponent>(args.Target);
+                EnsureComp<WormComponent>(args.Target);
             },
             Impact = LogImpact.Extreme,
-            Message = string.Join(": ", valleyGirlName, Loc.GetString("admin-smite-valley-accent-description"))
+            Message = string.Join(": ", crawlerName, Loc.GetString("admin-smite-crawler-description"))
         };
-        args.Verbs.Add(valleyaccent);
-        //Harmony change end
-
+        args.Verbs.Add(crawler);
     }
 }

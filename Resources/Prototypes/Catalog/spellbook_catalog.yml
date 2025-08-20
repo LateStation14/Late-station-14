@@ -290,7 +290,7 @@
   - SpellbookEvents
   conditions:
   - !type:ListingLimitedStockCondition
-    stock: 0 # Harmony change
+    stock: 1
 
 - type: listing
   id: SpellbookEventSummonGuns
@@ -303,7 +303,7 @@
   - SpellbookEvents
   conditions:
   - !type:ListingLimitedStockCondition
-    stock: 0 # Harmony change
+    stock: 1
   disableRefund: true
 
 - type: listing
@@ -317,7 +317,7 @@
   - SpellbookEvents
   conditions:
   - !type:ListingLimitedStockCondition
-    stock: 0 # Harmony change
+    stock: 1
   disableRefund: true
 
 # Upgrades

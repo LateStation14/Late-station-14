@@ -95,9 +95,7 @@
         collection: Punch
       damage:
         types:
-          Blunt: 6
-          Slash: 7
-          Piercing: 7
+          Blunt: 20
           Structural: 20
     - type: MeleeSpeech
     - type: UserInterface
@@ -241,6 +239,9 @@
           Piercing: 4
         groups:
           Burn: 3
+      catchingFailDamage:
+        types:
+          Blunt: 1
     - type: MeleeWeapon
       angle: 30
       animation: WeaponArcFist
@@ -254,7 +255,7 @@
       prototypes: [ HoloClownGear ]
     - type: RandomMetadata
       nameSegments:
-      - names_clown
+      - NamesClown
     - type: NpcFactionMember
       factions:
         - Syndicate

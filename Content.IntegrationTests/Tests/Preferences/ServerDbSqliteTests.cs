@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Content.Server.Database;
-using Content.Shared._CD.Records;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Preferences;
@@ -24,17 +23,17 @@ namespace Content.IntegrationTests.Tests.Preferences
         [TestPrototypes]
         private const string Prototypes = @"
 - type: dataset
-  id: sqlite_test_names_first_male
+  id: sqlite_test_NamesFirstMale
   values:
   - Aaden
 
 - type: dataset
-  id: sqlite_test_names_first_female
+  id: sqlite_test_NamesFirstFemale
   values:
   - Aaliyah
 
 - type: dataset
-  id: sqlite_test_names_last
+  id: sqlite_test_NamesLast
   values:
   - Ackerley";
 
@@ -53,9 +52,7 @@ namespace Content.IntegrationTests.Tests.Preferences
                     Color.Aquamarine,
                     Color.Azure,
                     Color.Beige,
-                    new ()),
-                // CD: test records
-                CDCharacterRecords = PlayerProvidedCharacterRecords.DefaultRecords()
+                    new ())
             };
         }
 

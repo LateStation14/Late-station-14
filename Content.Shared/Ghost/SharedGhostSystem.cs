@@ -49,7 +49,7 @@ namespace Content.Shared.Ghost
                 return;
 
             entity.Comp.TimeOfDeath = value;
-            Dirty(entity, entity.Comp);
+            Dirty(entity);
         }
 
         [Obsolete("Use the Entity<GhostComponent?> overload")]

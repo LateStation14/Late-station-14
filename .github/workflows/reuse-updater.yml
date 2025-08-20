@@ -1,0 +1,155 @@
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+name: Update REUSE Headers
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+    paths:
+      - '**/*.cs'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - '**/*.py'
+      - '.reuse/**'
+      - 'REUSE.toml'
+      - 'LICENSES/**'
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  PR_NUMBER: ${{ github.event.pull_request.number }}
+  REUSE_LICENSE_MAP_PATH: .reuse/path-licenses.json
+
+jobs:
+  update_headers:
+    # Skip runs triggered by our bot to avoid self-trigger loops on synchronize
+    if: ${{ github.actor != 'PJBot' && github.actor != 'weh-bot' && github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Git identity
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        shell: bash
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Get Changed Files and PR Info
+        id: changed_files
+        env:
+           PR_BODY: ${{ github.event.pull_request.body }}
+           GH_REPO: ${{ github.repository }}
+           PR_NUMBER: ${{ env.PR_NUMBER }}
+        run: |
+          set -e # Exit script on first error
+
+          echo "Fetching files for PR #${PR_NUMBER} in repo ${GH_REPO}"
+
+          PR_FILES_JSON=$(curl -s -f -H "Authorization: token ${GH_TOKEN}" \
+            "https://api.github.com/repos/${GH_REPO}/pulls/${PR_NUMBER}/files")
+
+          if [ $? -ne 0 ]; then
+            echo "Error fetching PR files from GitHub API."
+            exit 1
+          fi
+
+          if ! echo "$PR_FILES_JSON" | jq -e . > /dev/null; then
+             echo "Warning: Received empty or invalid JSON from GitHub API for PR files."
+             PR_FILES="" # Set PR_FILES to empty to avoid errors below
+          else
+             PR_FILES=$(echo "$PR_FILES_JSON" | jq -r '.[] | select(.filename != null) | "\(.status) \(.filename)"')
+          fi
+
+          if [ -z "$PR_FILES" ]; then
+            echo "No files found in PR."
+            ADDED_FILES=""
+            MODIFIED_FILES=""
+          else
+            ADDED_FILES=$(echo "$PR_FILES" | grep -E "^added" | grep -E '\\.(cs|ya?ml)$' | sed 's/^added //' | xargs) || true
+            MODIFIED_FILES=$(echo "$PR_FILES" | grep -E "^(modified|renamed|copied|changed)" | grep -E '\\.(cs|ya?ml)$' | sed 's/^[^ ]* //' | xargs) || true
+          fi
+
+          echo "Added Files: $ADDED_FILES"
+          echo "Modified Files: $MODIFIED_FILES"
+
+          echo "ADDED_FILES_LIST<<EOF" >> $GITHUB_ENV
+          echo "$ADDED_FILES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "MODIFIED_FILES_LIST<<EOF" >> $GITHUB_ENV
+          echo "$MODIFIED_FILES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "Checking PR body for license..."
+          if grep -q "LICENSE: MIT" <<< "$PR_BODY"; then
+            echo "PR_LICENSE=mit" >> $GITHUB_ENV
+            echo "License specified in PR: MIT"
+          elif grep -q "LICENSE: AGPL" <<< "$PR_BODY"; then
+            echo "PR_LICENSE=agpl" >> $GITHUB_ENV
+            echo "License specified in PR: AGPL"
+          elif grep -q "LICENSE: MPL" <<< "$PR_BODY"; then
+            echo "PR_LICENSE=mpl" >> $GITHUB_ENV
+            echo "License specified in PR: MPL"
+          else
+            echo "PR_LICENSE=mit" >> $GITHUB_ENV
+            echo "No license specified in PR, using default: MIT"
+          fi
+        shell: bash
+
+      - name: Skip if no relevant files changed
+        if: ${{ env.ADDED_FILES_LIST == '' && env.MODIFIED_FILES_LIST == '' }}
+        run: |
+          echo "No relevant .cs/.yml/.yaml/.py changes detected; skipping header update."
+        shell: bash
+
+      - name: Run REUSE Header Update Script
+        if: ${{ env.ADDED_FILES_LIST != '' || env.MODIFIED_FILES_LIST != '' }}
+        run: |
+          python Tools/update_pr_reuse_headers.py \
+            --files-added $ADDED_FILES_LIST \
+            --files-modified $MODIFIED_FILES_LIST \
+            --pr-license "$PR_LICENSE" \
+            --pr-base-sha ${{ github.event.pull_request.base.sha }} \
+            --pr-head-sha ${{ github.event.pull_request.head.sha }} \
+            --pr-author ${{ github.event.pull_request.user.login }}
+        working-directory: ${{ github.workspace }}
+        shell: bash
+
+      - name: Commit changes (same-repo PRs only)
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository && (env.ADDED_FILES_LIST != '' || env.MODIFIED_FILES_LIST != '') }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(reuse): update REUSE headers (#$PR_NUMBER)"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.event.pull_request.head.repo.full_name }}.git"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
+        shell: bash
+
+      - name: Skip commit on forks (informational)
+        if: github.event.pull_request.head.repo.full_name != github.repository
+        run: echo "Running in forked PR context — not pushing changes."
+        shell: bash

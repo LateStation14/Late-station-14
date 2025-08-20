@@ -323,13 +323,6 @@ public sealed partial class ShuttleSystem
         {
             hyperspace.TargetCoordinates = config.Coordinates;
             hyperspace.TargetAngle = config.Angle;
-            // Harmony - Mark the docks as queued for a docking
-            config.Docks.ForEach(x =>
-            {
-                x.DockA.QueuedDocked = true;
-                x.DockB.QueuedDocked = true;
-            });
-            // End harmony
         }
         else if (TryGetFTLProximity(shuttleUid, new EntityCoordinates(target, Vector2.Zero), out var coords, out var targAngle))
         {
@@ -508,13 +501,6 @@ public sealed partial class ShuttleSystem
             else
             {
                 FTLDock((uid, xform), config);
-                // Harmony - Mark the docks as unqueued
-                config.Docks.ForEach(x =>
-                {
-                    x.DockA.QueuedDocked = false;
-                    x.DockB.QueuedDocked = false;
-                });
-                // End Harmony
             }
 
             mapId = mapCoordinates.MapId;
@@ -630,10 +616,7 @@ public sealed partial class ShuttleSystem
         {
             foreach (var child in toKnock)
             {
-                if (!_statusQuery.TryGetComponent(child, out var status))
-                    continue;
-
-                _stuns.TryParalyze(child, _hyperspaceKnockdownTime, true, status);
+                _stuns.TryUpdateParalyzeDuration(child, _hyperspaceKnockdownTime);
 
                 // If the guy we knocked down is on a spaced tile, throw them too
                 if (grid != null)

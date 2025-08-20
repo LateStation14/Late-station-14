@@ -1,5 +1,5 @@
 ﻿﻿using Content.Server.GameTicking;
-using Content.Server.Station.Components;
+using Content.Shared.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Shared._Harmony.EntitySelector;
 using Robust.Shared.Map;
@@ -37,7 +37,7 @@ public sealed class MapModificationSystem : EntitySystem
                 break;
             }
 
-            var grid = _stationSystem.GetLargestGrid(Comp<StationDataComponent>(station.Value));
+            var grid = _stationSystem.GetLargestGrid(station.Value);
             if (grid == null)
             {
                 DebugTools.Assert($"Station on map {args.GameMap.ID} has no grids.");

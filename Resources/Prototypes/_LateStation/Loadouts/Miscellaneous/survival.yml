@@ -1,0 +1,6 @@
+- type: loadoutEffectGroup
+  id: EffectSpeciesHarpy
+  effects:
+  - !type:SpeciesLoadoutEffect
+    species:
+    - Harpy

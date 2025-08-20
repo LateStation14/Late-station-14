@@ -570,3 +570,100 @@ Entries:
       message: Fixed undergarments not working.
   id: 73
   time: '2025-07-17T19:25:41.0000000+00:00'
+- author: Hobbitmax
+  changes:
+    - type: Add
+      message: Added a new BIGGER storage implant for administrative useage
+    - type: Fix
+      message: Alllowed scurrets to properly have access to suit slot items.
+  id: 74
+  time: '2025-07-27T15:41:26.0000000+00:00'
+- author: Lachryphage
+  changes:
+    - type: Add
+      message: Added a new ultralow pop station, Vanquish (Previously Akatsumi)!
+  id: 75
+  time: '2025-07-30T10:54:02.0000000+00:00'
+- author: Lachryphage
+  changes:
+    - type: Add
+      message: Added Vanquish as it's own loadable shuttle.
+    - type: Fix
+      message: Fixed vanquish's unanchored security beacon.
+  id: 76
+  time: '2025-08-01T11:42:19.0000000+00:00'
+- author: superjeepboy
+  changes:
+    - type: Add
+      message: Added Polymorphine, a new chemical.
+  id: 77
+  time: '2025-08-11T17:51:35.0000000+00:00'
+- author: superjeepboy
+  changes:
+    - type: Add
+      message: Added the ability for botany mutations to roll for Polymorphine.
+    - type: Tweak
+      message: Refactored the reaction for Polymorphine.
+  id: 78
+  time: '2025-08-12T12:16:09.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Fixed most things the rebase broke.
+    - type: Add
+      message: The ventcritters have been reworked.
+  id: 79
+  time: '2025-08-14T15:35:20.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Turtlenecks are back in the winterdrobe.
+  id: 80
+  time: '2025-08-15T10:39:13.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Reverted various things back to their original state.
+  id: 81
+  time: '2025-08-15T12:16:41.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Add
+      message: >-
+        Added the "enforcer" armor and mask to the SecDrobe's MNGR wire
+        inventory. Special thanks to EVIN [EVIN] and KaittoNeko for making the
+        sprites and helping me recreate them respectively.
+  id: 82
+  time: '2025-08-15T12:29:44.0000000+00:00'
+- author: bruhmogus
+  changes:
+    - type: Add
+      message: >-
+        Added a crumbling brick to the trinket loadout list. Throw them at
+        hapless girlkissers.
+    - type: Tweak
+      message: Removed ALL playtime requirements from loadout items.
+    - type: Tweak
+      message: You can now bring up to five trinkets. Rejoice, smokers!
+  id: 83
+  time: '2025-08-15T12:42:38.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Admin records can be saved again
+  id: 84
+  time: '2025-08-16T11:51:59.0000000+00:00'
+- author: mogaiskii
+  changes:
+    - type: Add
+      message: Added new species - resomi (Urist McSmallRaptor)
+  id: 85
+  time: '2025-08-16T18:42:21.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Added Resomi to the guidebook
+    - type: Tweak
+      message: Tweaked the "raised by" traits.
+  id: 86
+  time: '2025-08-18T13:23:23.0000000+00:00'

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/bfc9c6ba8126ee8c41564d68c4bfb9ce37faa8f8 | vulpkanin version taken from DeltaV station at https://github.com/DeltaV-Station/Delta-v/pull/517/commits/d5ceef26e0cbd29df73d47bc900bf2ed14580c9d edited by Floofers",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/bfc9c6ba8126ee8c41564d68c4bfb9ce37faa8f8",
   "size": {
     "x": 32,
     "y": 32
@@ -134,56 +134,6 @@
     },
     {
       "name": "lit-inhand-right",
-      "directions": 4,
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ],
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ],
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ],
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ]
-      ]
-    },
-    {
-      "name": "unlit-equipped-MASK-vulpkanin",
-      "directions": 4
-    },
-    {
-      "name": "lit-equipped-MASK-vulpkanin",
       "directions": 4,
       "delays": [
         [

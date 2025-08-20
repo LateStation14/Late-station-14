@@ -7,12 +7,11 @@
   components:
     - type: Sprite
       sprite: Objects/Weapons/Melee/shields.rsi
-      state: icon
-      #state: riot-icon #Harmony Change: Replaced with a more suitable state due to being redudant
+      state: riot-icon
     - type: Item
       sprite: Objects/Weapons/Melee/shields.rsi
       size: Ginormous
-      #heldPrefix: riot #Harmony Change: Removed due to being redundant
+      heldPrefix: riot
     - type: Blocking
       passiveBlockModifier:
         coefficients:
@@ -69,19 +68,6 @@
   id: RiotShield
   description: A large tower shield. Good for controlling crowds.
   components:
-# Begin of Harmony Change: Shield Rework -- Suit Storage Slot
-    - type: Sprite
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/riot-shield.rsi
-      state: icon
-    - type: Item
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/riot-shield.rsi
-      size: Ginormous
-    - type: Clothing
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/riot-shield.rsi
-      quickEquip: false
-      slots:
-      - suitStorage
-# End of Harmony Change
     - type: StaticPrice
       price: 90
     - type: Blocking
@@ -103,21 +89,10 @@
   id: RiotLaserShield
   description: A shield built for withstanding lasers, but not much else.
   components:
-# Begin of Harmony Change: Shield Rework -- Suit Storage Slot
     - type: Sprite
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/riot-laser-shield.rsi
-      state: icon
-      #state: riot_laser-icon
+      state: riot_laser-icon
     - type: Item
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/riot-laser-shield.rsi
-      size: Ginormous
-      #heldPrefix: riot_laser
-    - type: Clothing
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/riot-laser-shield.rsi
-      quickEquip: false
-      slots:
-      - suitStorage
-# End of Harmony Change
+      heldPrefix: riot_laser
     - type: Blocking
       passiveBlockModifier:
         coefficients:
@@ -134,21 +109,10 @@
   id: RiotBulletShield
   description: A shield built for protecting against ballistics, but not much else.
   components:
-# Begin of Harmony Change: Shield Rework -- Suit Storage Slot
     - type: Sprite
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/riot-bullet-shield.rsi
-      state: icon
-      #state: riot_bullet-icon
+      state: riot_bullet-icon
     - type: Item
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/riot-bullet-shield.rsi
-      size: Ginormous
-      #heldPrefix: riot_bullet
-    - type: Clothing
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/riot-bullet-shield.rsi
-      quickEquip: false
-      slots:
-      - suitStorage
-# End of Harmony Change
+      heldPrefix: riot_bullet
     - type: Blocking
       passiveBlockModifier:
         coefficients:
@@ -167,21 +131,10 @@
   id: WoodenBuckler
   description: A small round wooden makeshift shield.
   components:
-# Begin of Harmony Change: Shield Rework -- Suit Storage Slot
     - type: Sprite
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/buckler.rsi
-      state: icon
-      #state: buckler-icon
+      state: buckler-icon
     - type: Item
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/buckler.rsi
-      size: Ginormous
-      #heldPrefix: buckler
-    - type: Clothing
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/buckler.rsi
-      quickEquip: false
-      slots:
-      - suitStorage
-# End of Harmony Change
+      heldPrefix: buckler
     - type: Blocking
       passiveBlockModifier:
         coefficients:
@@ -228,26 +181,70 @@
       price: 150
 
 - type: entity
+  name: cardboard shield
+  parent: BaseShield
+  id: CardShield
+  description: A shield that wont shield you from much.
+  components:
+    - type: Sprite
+      state: cardshield-icon
+    - type: Item
+      heldPrefix: cardshield
+    - type: StaminaResistance
+      damageCoefficient: 0.95
+      worn: true
+    - type: Blocking
+      passiveBlockModifier:
+        coefficients:
+          Blunt: 1
+          Slash: 2
+          Piercing: 0.6
+          Heat: 3
+      activeBlockModifier:
+        coefficients:
+          Blunt: 0.9
+          Slash: 1.8
+          Piercing: 0.5
+          Heat: 2.5
+        flatReductions:
+          Blunt: 0.5
+    - type: Construction
+      graph: CardShield
+      node: cardShield
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 25
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 10 #Very very weak shield
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:PlaySoundBehavior
+          sound: /Audio/Items/Toys/ToyFall2.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            MaterialCardboard:
+              min: 2
+              max: 4
+    - type: StaticPrice
+      price: 20
+
+- type: entity
   name: makeshift shield
   parent: BaseShield
   id: MakeshiftShield
   description: A rundown looking shield, not good for much.
   components:
-# Begin of Harmony Change: Shield Rework -- Suit Storage Slot
     - type: Sprite
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/makeshift-shield.rsi
-      state: icon
-      #state: makeshift-icon
+      state: makeshift-icon
     - type: Item
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/makeshift-shield.rsi
-      size: Ginormous
-      #heldPrefix: metal
-    - type: Clothing
-      sprite: _Harmony/Objects/Weapons/Melee/Shields/makeshift-shield.rsi
-      quickEquip: false
-      slots:
-      - suitStorage
-  # End of Harmony Change
+      heldPrefix: metal
     - type: Blocking
       passiveBlockModifier:
         coefficients:
@@ -605,4 +602,4 @@
                   min: 2
                   max: 2
     - type: StaticPrice
-      price: 250
+      price: 150

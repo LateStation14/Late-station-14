@@ -2,15 +2,45 @@
 
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled, assigned]
   pull_request_target:
-    types: [opened]
+    types: [opened, labeled, assigned, ready_for_review]
 
 jobs:
-  add_label:
+  manage_untriaged:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
     steps:
-    - uses: actions-ecosystem/action-add-labels@v1
-      if: join(github.event.issue.labels) == ''
+    - name: Add Untriaged when no labels exist (issue)
+      if: "${{ github.event_name == 'issues' && github.event.action == 'opened' && toJSON(github.event.issue.labels) == '[]' }}"
+      uses: actions-ecosystem/action-add-labels@v1
+      with:
+        labels: "S: Untriaged"
+    - name: Add Untriaged when no labels exist (pull request)
+      if: "${{ github.event_name == 'pull_request_target' && github.event.action == 'opened' && toJSON(github.event.pull_request.labels) == '[]' }}"
+      uses: actions-ecosystem/action-add-labels@v1
+      with:
+        labels: "S: Untriaged"
+    - name: Remove Untriaged when a different label is added (issue)
+      if: "${{ github.event_name == 'issues' && github.event.action == 'labeled' && github.event.label.name != 'S: Untriaged' }}"
+      uses: actions-ecosystem/action-remove-labels@v1
+      with:
+        labels: "S: Untriaged"
+    - name: Remove Untriaged when a different label is added (pull request)
+      if: "${{ github.event_name == 'pull_request_target' && github.event.action == 'labeled' && github.event.label.name != 'S: Untriaged' }}"
+      uses: actions-ecosystem/action-remove-labels@v1
+      with:
+        labels: "S: Untriaged"
+    - name: Remove Untriaged when assigned (issue)
+      if: "${{ github.event_name == 'issues' && github.event.action == 'assigned' }}"
+      uses: actions-ecosystem/action-remove-labels@v1
+      with:
+        labels: "S: Untriaged"
+    - name: Remove Untriaged when assigned or PR ready for review (pull request)
+      if: "${{ github.event_name == 'pull_request_target' && (github.event.action == 'assigned' || github.event.action == 'ready_for_review') }}"
+      uses: actions-ecosystem/action-remove-labels@v1
       with:
         labels: "S: Untriaged"
