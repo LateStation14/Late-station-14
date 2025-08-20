@@ -79,5 +79,5 @@
     smokePrototype: Resin
   - type: TimerTrigger
     delay: 0.6
-  - type: TriggerOnSpawn
   - type: DeleteOnTrigger
+  - type: TriggerOnSpawn
