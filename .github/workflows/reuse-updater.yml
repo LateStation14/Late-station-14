@@ -16,6 +16,10 @@ on:
       - reopened
       - ready_for_review
 
+permissions:
+  contents: write
+  pull-requests: read
+
 jobs:
   update_headers:
     runs-on: ubuntu-latest
@@ -24,7 +28,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
           token: ${{ secrets.WEH_BOT_PAT }}
 
@@ -32,6 +36,27 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Install jq
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+        shell: bash
+
+      - name: Resolve bot identity
+        id: bot_id
+        env:
+          VAR_USER: ${{ vars.WEH_BOT_USERNAME }}
+          VAR_EMAIL: ${{ vars.WEH_BOT_EMAIL }}
+        run: |
+          set -euo pipefail
+          NAME="${VAR_USER:-}"
+          EMAIL="${VAR_EMAIL:-}"
+          if [ -z "$NAME" ]; then NAME="weh-bot"; fi
+          if [ -z "$EMAIL" ]; then EMAIL="weh-bot@users.noreply.github.com"; fi
+          echo "name=$NAME" >> $GITHUB_OUTPUT
+          echo "email=$EMAIL" >> $GITHUB_OUTPUT
+        shell: bash
 
       - name: Get Changed Files and PR Info
         id: changed_files
@@ -102,15 +127,16 @@ jobs:
             --files-modified ${{ env.MODIFIED_FILES_LIST }} \
             --pr-license ${{ env.PR_LICENSE }} \
             --pr-base-sha ${{ github.event.pull_request.base.sha }} \
-            --pr-head-sha ${{ github.event.pull_request.head.sha }}
+            --pr-head-sha ${{ github.event.pull_request.head.sha }} \
+            --pr-author ${{ github.event.pull_request.user.login }}
         working-directory: ${{ github.workspace }}
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: automatically update REUSE headers"
-          commit_user_name: ${{ vars.WEH_BOT_USERNAME }}
-          commit_user_email: ${{ vars.WEH_BOT_EMAIL }}
-          commit_author: ${{ vars.WEH_BOT_USERNAME }} <${{ vars.WEH_BOT_EMAIL }}>
+          commit_user_name: ${{ steps.bot_id.outputs.name }}
+          commit_user_email: ${{ steps.bot_id.outputs.email }}
+          commit_author: ${{ steps.bot_id.outputs.name }} <${{ steps.bot_id.outputs.email }}>
           skip_dirty_check: false
           skip_fetch: true
