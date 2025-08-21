@@ -34,7 +34,7 @@ LICENSE_CONFIG = {
     "mpl": {"id": "MPL-2.0", "path": "LICENSES/MPL-2.0.txt"},
 }
 
-DEFAULT_LICENSE_LABEL = "mit"
+DEFAULT_LICENSE_LABEL = "agpl"
 
 # Dictionary mapping file extensions to comment styles
 # Format: {extension: (prefix, suffix)}
