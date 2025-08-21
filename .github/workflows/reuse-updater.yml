@@ -1,8 +1,9 @@
 # SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Aidenkrz <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Lachryphage (GitHub)
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 # SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
-# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -22,6 +23,7 @@ permissions:
 
 jobs:
   update_headers:
+    if: ${{ github.actor != 'weh-bot' && github.actor != 'github-actions[bot]' && github.actor != 'PJBot' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -46,8 +48,8 @@ jobs:
       - name: Resolve bot identity
         id: bot_id
         env:
-          VAR_USER: ${{ vars.WEH_BOT_USERNAME }}
-          VAR_EMAIL: ${{ vars.WEH_BOT_EMAIL }}
+          VAR_USER: ${{ vars.WEH_BOT_USERNAME || 'weh-bot' }}
+          VAR_EMAIL: ${{ vars.WEH_BOT_EMAIL || 'weh-bot@users.noreply.github.com' }}
         run: |
           set -euo pipefail
           NAME="${VAR_USER:-}"
@@ -97,35 +99,35 @@ jobs:
           echo "Added Files: $ADDED_FILES"
           echo "Modified Files: $MODIFIED_FILES"
 
-          echo "ADDED_FILES_LIST<<EOF" >> $GITHUB_ENV
-          echo "$ADDED_FILES" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          echo "added<<EOF" >> $GITHUB_OUTPUT
+          echo "$ADDED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
-          echo "MODIFIED_FILES_LIST<<EOF" >> $GITHUB_ENV
-          echo "$MODIFIED_FILES" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          echo "modified<<EOF" >> $GITHUB_OUTPUT
+          echo "$MODIFIED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
           echo "Checking PR body for license..."
           if grep -q "LICENSE: MIT" <<< "$PR_BODY"; then
-            echo "PR_LICENSE=mit" >> $GITHUB_ENV
+            echo "license=mit" >> $GITHUB_OUTPUT
             echo "License specified in PR: MIT"
           elif grep -q "LICENSE: AGPL" <<< "$PR_BODY"; then
-            echo "PR_LICENSE=agpl" >> $GITHUB_ENV
+            echo "license=agpl" >> $GITHUB_OUTPUT
             echo "License specified in PR: AGPL"
           elif grep -q "LICENSE: MPL" <<< "$PR_BODY"; then
-            echo "PR_LICENSE=mpl" >> $GITHUB_ENV
+            echo "license=mpl" >> $GITHUB_OUTPUT
             echo "License specified in PR: MPL"
           else
-            echo "PR_LICENSE=agpl" >> $GITHUB_ENV
+            echo "license=agpl" >> $GITHUB_OUTPUT
             echo "No license specified in PR, using default: AGPL"
           fi
 
       - name: Run REUSE Header Update Script
         run: |
           python Tools/update_pr_reuse_headers.py \
-            --files-added ${{ env.ADDED_FILES_LIST }} \
-            --files-modified ${{ env.MODIFIED_FILES_LIST }} \
-            --pr-license ${{ env.PR_LICENSE }} \
+            --files-added "${{ steps.changed_files.outputs.added }}" \
+            --files-modified "${{ steps.changed_files.outputs.modified }}" \
+            --pr-license "${{ steps.changed_files.outputs.license }}" \
             --pr-base-sha ${{ github.event.pull_request.base.sha }} \
             --pr-head-sha ${{ github.event.pull_request.head.sha }} \
             --pr-author ${{ github.event.pull_request.user.login }}
@@ -134,7 +136,7 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: automatically update REUSE headers"
+          commit_message: "chore: automatically update REUSE headers [skip ci]"
           commit_user_name: ${{ steps.bot_id.outputs.name }}
           commit_user_email: ${{ steps.bot_id.outputs.email }}
           commit_author: ${{ steps.bot_id.outputs.name }} <${{ steps.bot_id.outputs.email }}>
