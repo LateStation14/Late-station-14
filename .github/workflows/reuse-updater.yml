@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Aidenkrz <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
 # SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
@@ -5,48 +9,24 @@
 name: Update REUSE Headers
 
 on:
-  pull_request:
+  pull_request_target:
     types:
       - opened
       - synchronize
       - reopened
       - ready_for_review
-    paths:
-      - '**/*.cs'
-      - '**/*.yml'
-      - '**/*.yaml'
-      - '**/*.py'
-      - '.reuse/**'
-      - 'REUSE.toml'
-      - 'LICENSES/**'
-
-env:
-  GH_TOKEN: ${{ github.token }}
-  PR_NUMBER: ${{ github.event.pull_request.number }}
-  REUSE_LICENSE_MAP_PATH: .reuse/path-licenses.json
 
 jobs:
   update_headers:
-    # Skip runs triggered by our bot to avoid self-trigger loops on synchronize
-    if: ${{ github.actor != 'PJBot' && github.actor != 'weh-bot' && github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: read
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
-          persist-credentials: false
-
-      - name: Setup Git identity
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        shell: bash
+          token: ${{ secrets.WEH_BOT_PAT }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -57,8 +37,9 @@ jobs:
         id: changed_files
         env:
            PR_BODY: ${{ github.event.pull_request.body }}
+           GH_TOKEN: ${{ secrets.WEH_BOT_PAT }}
            GH_REPO: ${{ github.repository }}
-           PR_NUMBER: ${{ env.PR_NUMBER }}
+           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           set -e # Exit script on first error
 
@@ -84,8 +65,8 @@ jobs:
             ADDED_FILES=""
             MODIFIED_FILES=""
           else
-            ADDED_FILES=$(echo "$PR_FILES" | grep -E "^added" | grep -E '\\.(cs|ya?ml)$' | sed 's/^added //' | xargs) || true
-            MODIFIED_FILES=$(echo "$PR_FILES" | grep -E "^(modified|renamed|copied|changed)" | grep -E '\\.(cs|ya?ml)$' | sed 's/^[^ ]* //' | xargs) || true
+            ADDED_FILES=$(echo "$PR_FILES" | grep "^added" | grep -E '\.(cs|ya?ml)$' | sed 's/^added //' | xargs) || true
+            MODIFIED_FILES=$(echo "$PR_FILES" | grep "^modified" | grep -E '\.(cs|ya?ml)$' | sed 's/^modified //' | xargs) || true
           fi
 
           echo "Added Files: $ADDED_FILES"
@@ -110,46 +91,26 @@ jobs:
             echo "PR_LICENSE=mpl" >> $GITHUB_ENV
             echo "License specified in PR: MPL"
           else
-            echo "PR_LICENSE=mit" >> $GITHUB_ENV
-            echo "No license specified in PR, using default: MIT"
+            echo "PR_LICENSE=agpl" >> $GITHUB_ENV
+            echo "No license specified in PR, using default: AGPL"
           fi
-        shell: bash
-
-      - name: Skip if no relevant files changed
-        if: ${{ env.ADDED_FILES_LIST == '' && env.MODIFIED_FILES_LIST == '' }}
-        run: |
-          echo "No relevant .cs/.yml/.yaml/.py changes detected; skipping header update."
-        shell: bash
 
       - name: Run REUSE Header Update Script
-        if: ${{ env.ADDED_FILES_LIST != '' || env.MODIFIED_FILES_LIST != '' }}
         run: |
           python Tools/update_pr_reuse_headers.py \
-            --files-added $ADDED_FILES_LIST \
-            --files-modified $MODIFIED_FILES_LIST \
-            --pr-license "$PR_LICENSE" \
+            --files-added ${{ env.ADDED_FILES_LIST }} \
+            --files-modified ${{ env.MODIFIED_FILES_LIST }} \
+            --pr-license ${{ env.PR_LICENSE }} \
             --pr-base-sha ${{ github.event.pull_request.base.sha }} \
-            --pr-head-sha ${{ github.event.pull_request.head.sha }} \
-            --pr-author ${{ github.event.pull_request.user.login }}
+            --pr-head-sha ${{ github.event.pull_request.head.sha }}
         working-directory: ${{ github.workspace }}
-        shell: bash
 
-      - name: Commit changes (same-repo PRs only)
-        if: ${{ github.event.pull_request.head.repo.full_name == github.repository && (env.ADDED_FILES_LIST != '' || env.MODIFIED_FILES_LIST != '') }}
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-          git commit -m "chore(reuse): update REUSE headers (#$PR_NUMBER)"
-          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.event.pull_request.head.repo.full_name }}.git"
-          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
-        shell: bash
-
-      - name: Skip commit on forks (informational)
-        if: github.event.pull_request.head.repo.full_name != github.repository
-        run: echo "Running in forked PR context — not pushing changes."
-        shell: bash
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: automatically update REUSE headers"
+          commit_user_name: ${{ vars.WEH_BOT_USERNAME }}
+          commit_user_email: ${{ vars.WEH_BOT_EMAIL }}
+          commit_author: ${{ vars.WEH_BOT_USERNAME }} <${{ vars.WEH_BOT_EMAIL }}>
+          skip_dirty_check: false
+          skip_fetch: true
