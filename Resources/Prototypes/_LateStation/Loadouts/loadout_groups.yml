@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+# SPDX-FileCopyrightText: 2025 bruhmogus <104110869+bruhmogus@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 DoggowithaKeyboard <gaincarlo48@gmail.com>
+#
+# SPDX-License-Identifier: MIT OR AGPL-3.0-or-later
+
 # TO ADD A NEW PERSONAL ITEM LOADOUT, you MUST do the following:
 #
 # 1. Create a LOADOUT (type: loadout) with a PersonalItemLoadoutEffect
