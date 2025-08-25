@@ -667,3 +667,9 @@ Entries:
       message: Tweaked the "raised by" traits.
   id: 86
   time: '2025-08-18T13:23:23.0000000+00:00'
+- author: DoggowithaKeyboard
+  changes:
+    - type: Add
+      message: Added Lucy Price's Trenchcoat as a Personal Item.
+  id: 87
+  time: '2025-08-25T15:18:45.0000000+00:00'
