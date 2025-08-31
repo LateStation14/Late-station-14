@@ -1,0 +1,201 @@
+# SPDX-FileCopyrightText: 2025 bruhmogus <104110869+bruhmogus@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: loadout
+  id: BarberScissors
+  storage:
+    back:
+    - BarberScissors
+
+- type: loadout
+  id: HairBrush
+  storage:
+    back:
+    - HairBrush
+
+- type: loadout
+  id: NTHandyFlag
+  storage:
+    back:
+    - NTHandyFlag
+  groupBy: "handflag"
+
+- type: loadout
+  id: LGBTQHandyFlag
+  storage:
+    back:
+    - LGBTQHandyFlag
+  groupBy: "handflag"
+
+- type: loadout
+  id: FlippoLighter
+  storage:
+    back:
+    - FlippoLighter
+  groupBy: "smokeables"
+
+- type: loadout
+  id: DiscountDanLighter
+  storage:
+    back:
+      - DiscountDanLighter
+  groupBy: "smokeables"
+
+- type: loadout
+  id: NanotrasenFlippo
+  storage:
+    back:
+      - NanotrasenFlippo
+  groupBy: "smokeables"
+
+- type: loadout
+  id: SmokingPipe
+  storage:
+    back:
+      - SmokingPipe
+  groupBy: "smokeables"
+
+- type: loadout
+  id: Wristwatch
+  storage:
+    back:
+      - Wristwatch
+
+- type: loadout
+  id: PlushieBee
+  storage:
+    back:
+      - PlushieBee
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieArachind
+  storage:
+    back:
+      - PlushieArachind
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieNuke
+  storage:
+    back:
+      - PlushieNuke
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieDiona
+  storage:
+    back:
+      - PlushieDiona
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieSharkBlue
+  storage:
+    back:
+      - PlushieSharkBlue
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieSharkPink
+  storage:
+    back:
+      - PlushieSharkPink
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieSharkGrey
+  storage:
+    back:
+      - PlushieSharkGrey
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieCarp
+  storage:
+    back:
+      - PlushieCarp
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieMagicarp
+  storage:
+    back:
+      - PlushieMagicarp
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieHolocarp
+  storage:
+    back:
+      - PlushieHolocarp
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieSlime
+  storage:
+    back:
+      - PlushieSlime
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieSnake
+  storage:
+    back:
+      - PlushieSnake
+  groupBy: "plushies"
+
+- type: loadout
+  id: ToyMouse
+  storage:
+    back:
+      - ToyMouse
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieAtmosian
+  storage:
+    back:
+      - PlushieAtmosian
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieXeno
+  storage:
+    back:
+      - PlushieXeno
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushiePenguin
+  storage:
+    back:
+      - PlushiePenguin
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieHuman
+  storage:
+    back:
+      - PlushieHuman
+  groupBy: "plushies"
+
+- type: loadout
+  id: PlushieMoth
+  storage:
+    back:
+      - PlushieMoth
+  groupBy: "plushies"
+
+- type: loadout
+  id: PersonalAI
+  storage:
+    back:
+      - PersonalAI
+
+- type: loadout
+  id: Whistle
+  storage:
+    back:
+      - Whistle
