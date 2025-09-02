@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2025 Lachryphage (GitHub)
+// SPDX-FileCopyrightText: 2024 Dark <darkwindleaf@hotmail.co.uk>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Atmos;
 using Content.Shared.DoAfter;
 using Robust.Shared.Audio;
