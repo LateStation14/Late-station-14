@@ -9,7 +9,7 @@
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Akatsumi Syndicate Cruiser {1}'
+          mapNameTemplate: 'Akatsumi Syndicate Cruiser'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/_LateStation/shuttles/emergency_vanquish.yml
         - type: StationJobs
