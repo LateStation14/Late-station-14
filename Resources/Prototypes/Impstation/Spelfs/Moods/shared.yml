@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Lachryphage (GitHub)
+# SPDX-FileCopyrightText: 2024 V <97265903+formlessnameless@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
 # Shared moods will be selected at round start and shared amongst all spelves.
 # These are rolled before individual laws, and are considered more important.
 # Note: Only one law needs to say it conflicts with another
