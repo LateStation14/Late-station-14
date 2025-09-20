@@ -14,13 +14,10 @@
         {
             "name": "human_bodyhair_female",
             "directions": 4
-<<<<<<< HEAD
-=======
         },
         {
             "name": "thaven_bodyhair",
             "directions": 4
->>>>>>> 3167d35376 (Merge pull request #1302 from hivehum/spelf-to-thaven)
         }
     ]
 }
