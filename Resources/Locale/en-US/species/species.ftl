@@ -11,7 +11,3 @@ species-name-skeleton = Skeleton
 species-name-vox = Vox
 species-name-gingerbread = delicious baked good
 species-name-thaven = Thaven
-
-## Misc species things
-
-snail-hurt-by-salt-popup = The salty solution burns like acid!
