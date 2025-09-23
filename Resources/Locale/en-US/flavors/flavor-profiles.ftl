@@ -329,6 +329,9 @@ flavor-complex-vodka-martini = like a spy movie from Russia
 flavor-complex-vodka-tonic = refreshingly bitter
 flavor-complex-coconut-rum = like nutty fermented sugar
 flavor-complex-bacchus-blessing = like a wall of bricks
+flavor-complex-cottonbool = like an angry cloud
+flavor-complex-genderfluid = transitional
+flavor-complex-thavenbad = like you need to pretend you like it
 
 ### This is exactly what pilk tastes like. I'm not even joking. I might've been a little drunk though
 flavor-complex-pilk = like sweet milk

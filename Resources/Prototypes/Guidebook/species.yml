@@ -1,4 +1,6 @@
 # SPDX-FileCopyrightText: 2024 Errant <35878406+Errant-4@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 V <97265903+formlessnameless@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Lachryphage (GitHub)
 # SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 #
 # SPDX-License-Identifier: MIT
@@ -21,6 +23,7 @@
     - Avali
     - Felinid
     - Resomi
+    - Thaven
 
 - type: guideEntry
   id: Arachnid
@@ -86,3 +89,13 @@
   id: Resomi
   name: species-name-resomi
   text: "/ServerInfo/Guidebook/Mobs/_FloofStation/Resomi.xml"
+  id: SpElf
+  id: Thaven
+  name: Thaven
+  text: "/ServerInfo/Guidebook/Mobs/SpElf.xml"
+  text: "/ServerInfo/_Impstation/Guidebook/Mobs/Thaven.xml"
+
+- type: guideEntry
+  id: Decapoid
+  name: Decapoid
+  text: "/ServerInfo/_Impstation/Guidebook/Mobs/Decapoid.xml"

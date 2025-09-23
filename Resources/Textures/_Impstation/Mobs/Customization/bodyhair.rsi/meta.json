@@ -14,6 +14,10 @@
         {
             "name": "human_bodyhair_female",
             "directions": 4
+        },
+        {
+            "name": "thaven_bodyhair",
+            "directions": 4
         }
     ]
 }

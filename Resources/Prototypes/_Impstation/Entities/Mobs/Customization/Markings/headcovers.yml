@@ -111,6 +111,72 @@
   - sprite: _Impstation/Mobs/Customization/headcovers.rsi
     state: tichelfashionable
 
+#thaven
+- type: marking
+  id: BurqaSolidThaven
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Thaven]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: burqathaven
+
+- type: marking
+  id: HijabFashionableThaven
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Thaven]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: hijabchicthaven
+
+- type: marking
+  id: HijabSimpleThaven
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Thaven]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: hijabsimplethaven
+
+- type: marking
+  id: NiqabThaven
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Thaven]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: niqabthaven
+
+- type: marking
+  id: TichelFashionableThaven
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Thaven]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: tichelfashionablethaven
+
+- type: marking
+  id: TichelSimpleThaven
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Thaven]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: tichelsimplethaven
+
+- type: marking
+  id: ThavenNoEars
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Thaven]
+  forcedColoring: false
+  followSkinColor: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: thavennoears
+
 #vox
 - type: marking
   id: HijabSimpleVox

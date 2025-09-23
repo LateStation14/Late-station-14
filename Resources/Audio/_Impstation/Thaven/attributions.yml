@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Lachryphage (GitHub)
+# SPDX-FileCopyrightText: 2025 imcb <irismessage@protonmail.com>
+#
+# SPDX-License-Identifier: MIT
+
+- files: ["moods_changed.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Created by widgetbeck"
+  source: "https://github.com/impstation/imp-station-14/pull/830"

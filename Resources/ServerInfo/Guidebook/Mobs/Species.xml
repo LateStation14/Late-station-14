@@ -20,6 +20,7 @@
   <GuideEntityEmbed Entity="MobVulpkaninDummy" Caption="Vulpkanin"/>
   <GuideEntityEmbed Entity="MobAvali" Caption="Avali"/>
   <GuideEntityEmbed Entity="MobFelinidDummy" Caption="Felinid"/>
+    <GuideEntityEmbed Entity="MobThaven" Caption="Thaven"/>
   </Box>
   <Box>
   <GuideEntityEmbed Entity="MobResomiDummy" Caption="Resomi"/>
