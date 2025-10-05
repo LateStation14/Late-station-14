@@ -2,7 +2,7 @@
   id: BodyhairHumanMale
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Dwarf, Human, Felinid ]
+  speciesRestriction: [ Dwarf, Human ]
   sexRestriction: [ Male ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/bodyhair.rsi
@@ -12,17 +12,26 @@
   id: BodyhairHumanFemale
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Dwarf, Human, Felinid ]
+  speciesRestriction: [ Dwarf, Human ]
   sexRestriction: [ Female ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/bodyhair.rsi
     state: human_bodyhair_female
 
 - type: marking
+  id: BodyhairThaven
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [ Thaven ]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/bodyhair.rsi
+    state: thaven_bodyhair
+
+- type: marking
   id: BodyhairHumanUnsexed
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Dwarf, Human, Felinid ]
+  speciesRestriction: [ Dwarf, Human ]
   sexRestriction: [ Unsexed ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/bodyhair.rsi

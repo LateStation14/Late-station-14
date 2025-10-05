@@ -1,3 +1,14 @@
+# SPDX-FileCopyrightText: 2022 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Jezithyr <Jezithyr@gmail.com>
+# SPDX-FileCopyrightText: 2023 Jezithyr <jezithyr@gmail.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 metalgearsloth <comedian_vs_clown@hotmail.com>
+# SPDX-FileCopyrightText: 2024 V <97265903+formlessnameless@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Lachryphage (GitHub)
+# SPDX-FileCopyrightText: 2025 MoonlightHollow <muszynskinicholas8@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+
 - type: body
   id: Avali
   name: avali
@@ -8,7 +19,7 @@
       connections:
       - torso
       organs:
-        brain: OrganHumanBrain
+        brain: OrganSpelfBrain
         eyes: OrganHumanEyes
     torso:
       part: TorsoAvali
